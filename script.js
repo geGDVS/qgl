@@ -393,16 +393,19 @@ function showCurrentWord() {
     const hintElement = document.getElementById('hint');
     const currentPair = wordPairs[currentIndex];
     chineseWordElement.textContent = currentPair.chinese;
-    questionTypeElement.textContent = `考察：${currentPair.type}`;
+    questionTypeElement.textContent = `${currentPair.type}`;
 
     let hint = '';
     if (currentPair.type === '短语' || currentPair.type === '句子') {
         if (currentPair.keyWords) {
             hint = currentPair.keyWords.join(' ');
         }
+    } else if (currentPair.type === '单词') {
+        // 考察单词时，提示首字母
+        hint = `${currentPair.english[0]}-`;
     }
     if (hint) {
-        hintElement.textContent = `重点考察单词：${hint}`;
+        hintElement.textContent = `HINT: ${hint}`;
     } else {
         hintElement.textContent = '';
     }
@@ -415,7 +418,7 @@ function showCurrentWord() {
 function showAnswer() {
     const resultElement = document.getElementById('result-message');
     const correctAnswer = wordPairs[currentIndex].english;
-    resultElement.textContent = `答案是：${correctAnswer}`;
+    resultElement.textContent = `${correctAnswer}`;
 }
 
 // 显示下一个单词

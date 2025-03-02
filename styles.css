@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     transition: background-color 0.3s ease;
 }
@@ -14,43 +14,45 @@ body {
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 32px;
+    padding: 20px;
     text-align: center;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     transition: background-color 0.3s ease;
 }
 
 h1 {
     color: #1e88e5;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    font-size: 24px;
     transition: color 0.3s ease;
 }
 
 #question-type {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 8px;
 }
 
 #chinese-word {
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 #hint {
-    font-size: 18px;
-    margin-bottom: 16px;
+    font-size: 16px;
+    margin-bottom: 12px;
 }
 
 button {
     background-color: #1e88e5;
     color: #fff;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 8px;
+    margin: 6px;
 }
 
 button:hover {
@@ -58,14 +60,16 @@ button:hover {
 }
 
 #result-message {
-    font-size: 18px;
-    margin-top: 16px;
+    font-size: 16px;
+    margin-top: 12px;
 }
 
 #dark-mode-toggle {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    font-size: 14px;
 }
 
 /* 暗色模式样式 */
@@ -93,11 +97,11 @@ body.dark-mode button:hover {
 
 footer {
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     width: 100%;
     text-align: center;
     color: #777;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 footer a {
@@ -109,11 +113,43 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* 手机端样式优化 */
-@media (max-width: 600px) {
-    /* 让答题框变窄一点并与手机边框保持更大距离 */
-   .container {
-        width: 75%; /* 进一步缩小宽度 */
-        padding: 20px; /* 适当增加内边距 */
+/* 手机端适配 */
+@media (max-width: 480px) {
+    .container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    #question-type {
+        font-size: 14px;
+    }
+
+    #chinese-word {
+        font-size: 18px;
+    }
+
+    #hint {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    #dark-mode-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 10px;
     }
 }
