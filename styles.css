@@ -108,3 +108,12 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* 手机端样式优化 */
+@media (max-width: 600px) {
+    /* 让答题框变窄一点并与手机边框保持更大距离 */
+   .container {
+        width: 75%; /* 进一步缩小宽度 */
+        padding: 20px; /* 适当增加内边距 */
+    }
+}
