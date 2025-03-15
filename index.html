@@ -14,14 +14,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrambled Eggs With Tomatoes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="static/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="static/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="static/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SEWT" />
+    <link rel="manifest" href="static/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div class="select-container">
         <select id="exam-set-select" title="Select Exam Set">
-            <option value="qgl145_152">SEWT P145-152</option>
+            <option value="qgl153_160">SEWT P153-160</option>
             <option value="qgl137_144">SEWT P137-144</option>
+            <option value="qgl145_152">SEWT P145-152</option>
         </select>
         <span class="select-arrow"></span>
     </div>
@@ -30,17 +37,22 @@
         <p id="question-type"></p>
         <p id="chinese-word"></p>
         <p id="hint"></p>
-        <button id="show-answer-button">SHOW ANS</button>
+        <button id="show-answer-button" data-audio="static/audio/pong2.wav">SHOW ANS</button>
         <p id="result-message"></p>
-        <button id="next-button">NEXT</button>
+        <button id="next-button" data-audio="static/audio/pong1.wav">NEXT</button>
     </div>
-    <button id="dark-mode-toggle">Switch Mode</button>
+    <div class="toggle-buttons">
+        <button id="dark-mode-toggle" data-audio="static/audio/zi.wav">Switch Mode</button>
+        <button id="volume-toggle">Sound</button>
+    </div>
     <footer>
         <p>Copyright &copy; 2025 <a href="https://sqj.pages.dev">SQJ</a>. All rights reserved.</p>
         <p>View on <a href="https://github.com/geGDVS/qgl">GitHub</a></p>
     </footer>
-    <script src="words.js"></script>
-    <script src="script.js"></script>
+    <script src="js/qgl/p137_144.js"></script>
+    <script src="js/qgl/p145_152.js"></script>
+    <script src="js/qgl/p153_160.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
