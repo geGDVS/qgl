@@ -214,13 +214,6 @@ footer a:hover {
         font-size: 14px;
     }
 
-    #dark-mode-toggle {
-        top: 10px;
-        right: 10px;
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-
     .select-container {
         top: 10px;
         left: 10px;
@@ -230,6 +223,11 @@ footer a:hover {
     #exam-set-select {
         padding: 10px 30px 10px 12px;
         font-size: 14px;
+    }
+
+    .toggle-buttons {
+        top: 10px;
+        right: 10px;
     }
 
     footer {
