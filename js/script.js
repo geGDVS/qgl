@@ -40,20 +40,20 @@ function showCurrentWord() {
 
 // 显示答案
 function showAnswer() {
+    playAudio('show-answer-button');
     const resultElement = document.getElementById('result-message');
     const correctAnswer = currentExamSet[currentIndex].english;
     resultElement.textContent = `${correctAnswer}`;
-    playAudio('show-answer-button');
 }
 
 // 显示下一个单词
 function showNextWord() {
+    playAudio('next-button');
     currentIndex++;
     if (currentIndex >= currentExamSet.length) {
         currentIndex = 0;
     }
     showCurrentWord();
-    playAudio('next-button');
 }
 
 // 处理考察集选择事件
@@ -77,13 +77,13 @@ function playAudio(buttonId) {
 }
 
 function handleDarkModeToggle() {
+    playAudio('dark-mode-toggle');
     document.body.classList.toggle('dark-mode');
     if (document.body.classList.contains('dark-mode')) {
         localStorage.setItem('darkMode', 'enabled');
     } else {
         localStorage.setItem('darkMode', 'disabled');
     }
-    playAudio('dark-mode-toggle');
 }
 
 // 处理音量开关
