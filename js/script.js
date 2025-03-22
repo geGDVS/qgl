@@ -2,10 +2,14 @@ const examSets = {
     "qgl137_144": qgl137_144,
     "qgl145_152": qgl145_152,
     "qgl153_160": qgl153_160,
+    "qgl161_164": qgl161_164,
 };
 
 let currentIndex = 0;
-let currentExamSet = examSets.qgl153_160;
+// 从本地存储获取用户上次选择的单词集
+let savedExamSet = localStorage.getItem('selectedExamSet');
+// 默认选择考察集，如果没有存储记录则选择最后一个考察集
+let currentExamSet = savedExamSet ? examSets[savedExamSet] : examSets[Object.keys(examSets)[Object.keys(examSets).length - 1]];
 let isMuted = localStorage.getItem('isMuted') === 'true';
 const volumeButton = document.getElementById('volume-toggle');
 volumeButton.textContent = isMuted ? 'Unmute🔊' : 'Mute🔇';
@@ -58,11 +62,14 @@ function showNextWord() {
 
 // 处理考察集选择事件
 function handleExamSetChange() {
+    playAudio('exam-set-select');
     const selectElement = document.getElementById('exam-set-select');
     const selectedSet = selectElement.value;
     currentExamSet = examSets[selectedSet];
     currentIndex = 0; // 切换考察集后重置索引
     showCurrentWord();
+    // 保存用户选择的单词集到本地存储
+    localStorage.setItem('selectedExamSet', selectedSet);
 }
 
 // 播放音频函数
@@ -93,11 +100,26 @@ function handleVolumeToggle() {
     volumeButton.textContent = isMuted ? 'Unmute🔊' : 'Mute🔇';
 }
 
+// 前往指导页面
+function goToGuidePage() {
+    window.location.href = 'guide.html';
+}
 
 // 初始化页面
-showCurrentWord();
+function initPage() {
+    // 设置 select 元素的选中项
+    const selectElement = document.getElementById('exam-set-select');
+    const selectedSet = savedExamSet || Object.keys(examSets)[Object.keys(examSets).length - 1];
+    selectElement.value = selectedSet;
+
+    showCurrentWord();
+}
+
 
 // 添加事件监听器
+const guideButton = document.getElementById('guide-button');
+guideButton.addEventListener('click', goToGuidePage);
+
 const showAnswerButton = document.getElementById('show-answer-button');
 showAnswerButton.addEventListener('click', showAnswer);
 
@@ -128,3 +150,6 @@ if (savedMode === 'enabled') {
         document.body.classList.remove('dark-mode');
     }
 }
+
+// 初始化页面
+initPage();

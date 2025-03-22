@@ -24,13 +24,17 @@
 </head>
 
 <body>
-    <div class="select-container">
-        <select id="exam-set-select" title="Select Exam Set">
-            <option value="qgl153_160">SEWT P153-160</option>
-            <option value="qgl137_144">SEWT P137-144</option>
-            <option value="qgl145_152">SEWT P145-152</option>
-        </select>
-        <span class="select-arrow"></span>
+    <div class="select-buttons">
+        <div class="select-container">
+            <select id="exam-set-select" title="Select Exam Set" data-audio="static/audio/sword.wav">
+                <option value="qgl137_144">SEWT P137-144</option>
+                <option value="qgl145_152">SEWT P145-152</option>
+                <option value="qgl153_160">SEWT P153-160</option>
+                <option value="qgl161_164">SEWT P161-164</option>
+            </select>
+            <span class="select-arrow"></span>
+        </div>
+        <button id="guide-button">自定义单词集</button>
     </div>
     <div class="container">
         <h1>Test for SEWT</h1>
@@ -46,12 +50,13 @@
         <button id="volume-toggle">Sound</button>
     </div>
     <footer>
-        <p>Copyright &copy; 2025 <a href="https://sqj.pages.dev">SQJ</a>. All rights reserved.</p>
-        <p>View on <a href="https://github.com/geGDVS/qgl">GitHub</a></p>
+        Copyright &copy; 2025 <a href="https://sqj.pages.dev">SQJ</a>. All rights reserved.<br>
+        View on <a href="https://github.com/geGDVS/qgl">GitHub</a>
     </footer>
     <script src="js/qgl/p137_144.js"></script>
     <script src="js/qgl/p145_152.js"></script>
     <script src="js/qgl/p153_160.js"></script>
+    <script src="js/qgl/p161_164.js"></script>
     <script src="js/script.js"></script>
 </body>
 

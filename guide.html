@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYDS6C2K9N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KYDS6C2K9N');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEWT Guide</title>
+    <link rel="icon" type="image/png" href="static/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="static/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="static/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SEWT" />
+    <link rel="manifest" href="static/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+    <button id="back-button">Go Back</button>
+    <div class="container">
+        <h1>单词集编写与提交指南</h1>
+        <p>欢迎您自行编写单词集并提交给我们！以下是详细的操作步骤：</p>
+
+        <h2>步骤 1：编写单词集</h2>
+        <p>您可以使用任何文本编辑工具（如记事本、Word 等）来编写单词集。每个单词/短语/句子应包含中文和英文部分，如果是单词建议将词性注明，关键词个数可为0，格式如下：</p>
+        <pre>
+中文 1|英文 1|类型 1|关键词 1
+中文 2|英文 2|类型 2|关键词 2
+中文 3|英文 3|类型 3|关键词 3
+...
+        </pre>
+        <p>例如：</p>
+        <pre>
+n.苹果|apple|单词| 
+去公园|go to the park|短语|go
+我喜欢读书。|I like reading books|句子|like
+        </pre>
+
+        <h2>步骤 2：保存文件</h2>
+        <p>将编写好的单词集保存为一个文本文件（.txt 格式），确保文件名具有描述性，例如 "my_word_set.txt"。</p>
+
+        <h2>步骤 3：发送邮件</h2>
+        <p>将保存好的文本文件作为附件，发送到网站管理者的邮箱：<a href="mailto:unblze@gmail.com">unblze@gmail.com</a>。在邮件主题中，请注明 "单词集提交"，并在邮件正文中简要介绍您的单词集。</p>
+
+        <p>我们会尽快审核您提交的单词集，并在合适的时候将其添加到我们的系统中。感谢您的支持与贡献！</p>
+    </div>
+    <div class="toggle-buttons">
+        <button id="dark-mode-toggle" data-audio="static/audio/zi.wav">Switch Mode</button>
+        <button id="volume-toggle">Sound</button>
+    </div>
+    <footer>
+        Copyright &copy; 2025 <a href="https://sqj.pages.dev">SQJ</a>. All rights reserved.<br>
+        View on <a href="https://github.com/geGDVS/qgl">GitHub</a>
+    </footer>
+    <script src="js/guide.js"></script>
+</body>
+
+</html>
