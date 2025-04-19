@@ -111,7 +111,7 @@ button:hover {
 /* 下拉箭头样式 */
 .select-arrow {
     position: absolute;
-    top: 25%;
+    top: 20%;
     right: 16px;
     transform: translateY(-50%);
     pointer-events: none;
@@ -199,12 +199,11 @@ body.dark-mode .select-container:focus-within {
 
 .select-buttons div {
     width: 100%;
-    margin: 5px 0;
 }
 
 .select-buttons button {
     width: 100%;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 #back-button {
@@ -267,7 +266,7 @@ footer a:hover {
     }
 
     #exam-set-select {
-        padding: 10px 30px 10px 12px;
+        padding: 8px 30px 8px 12px;
         font-size: 14px;
     }
 
