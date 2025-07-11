@@ -12,7 +12,8 @@ const examSets = {
     "qgl213_220": qgl213_220,
     "qgl221_228": qgl221_228,
     "qgl229_236": qgl229_236,
-    "qgl237_244": qgl237_244 // 新增的考察集
+    "qgl237_244": qgl237_244,
+    "qgl245_252": qgl245_252
 };
 
 let currentIndex = 0;
