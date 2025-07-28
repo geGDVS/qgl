@@ -1,19 +1,22 @@
 const examSets = {
-    "qgl137_144": qgl137_144,
-    "qgl145_152": qgl145_152,
-    "qgl153_160": qgl153_160,
-    "qgl161_164": qgl161_164,
-    "qgl165_172": qgl165_172,
-    "qgl173_180": qgl173_180,
-    "qgl181_188": qgl181_188,
-    "qgl189_196": qgl189_196,
-    "qgl197_204": qgl197_204,
-    "qgl205_212": qgl205_212,
-    "qgl213_220": qgl213_220,
-    "qgl221_228": qgl221_228,
-    "qgl229_236": qgl229_236,
-    "qgl237_244": qgl237_244,
-    "qgl245_252": qgl245_252
+    "qgl137-144": qgl137_144,
+    "qgl145-152": qgl145_152,
+    "qgl153-160": qgl153_160,
+    "qglMid": qglMid,
+    "qgl161-164": qgl161_164,
+    "qgl165-172": qgl165_172,
+    "qgl173-180": qgl173_180,
+    "qgl181-188": qgl181_188,
+    "qgl189-196": qgl189_196,
+    "qgl197-204": qgl197_204,
+    "qgl205-212": qgl205_212,
+    "qgl213-220": qgl213_220,
+    "qgl221-228": qgl221_228,
+    "qgl229-236": qgl229_236,
+    "qgl237-244": qgl237_244,
+    "qgl245-252": qgl245_252,
+    "qgl253-260": qgl253_260,
+    "qgl261-268": qgl261_268
 };
 
 let currentIndex = 0;
@@ -116,6 +119,11 @@ function goToGuidePage() {
     window.location.href = 'guide.html';
 }
 
+function goToBook() {
+    const selectElement = document.getElementById('exam-set-select');
+    window.open(`static/book/全攻略P${selectElement.value.slice(3)}.pdf`, '_blank');
+}
+
 // 初始化页面
 function initPage() {
     // 设置 select 元素的选中项
@@ -130,6 +138,9 @@ function initPage() {
 // 添加事件监听器
 const guideButton = document.getElementById('guide-button');
 guideButton.addEventListener('click', goToGuidePage);
+
+const bookButton = document.getElementById('book-button');
+bookButton.addEventListener('click', goToBook);
 
 const showAnswerButton = document.getElementById('show-answer-button');
 showAnswerButton.addEventListener('click', showAnswer);

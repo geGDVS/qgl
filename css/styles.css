@@ -108,10 +108,14 @@ button:hover {
     outline: none;
 }
 
+#guide-button {
+    margin: 0px
+}
+
 /* 下拉箭头样式 */
 .select-arrow {
     position: absolute;
-    top: 20%;
+    top: 12%;
     right: 16px;
     transform: translateY(-50%);
     pointer-events: none;
