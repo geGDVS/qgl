@@ -159,6 +159,21 @@ darkModeToggle.addEventListener('click', handleDarkModeToggle);
 const volumeToggle = document.getElementById('volume-toggle');
 volumeToggle.addEventListener('click', handleVolumeToggle);
 
+// 键盘事件监听
+document.addEventListener('keydown', function(e) {
+    // 按S键触发显示答案（不区分大小写）
+    if (e.key.toLowerCase() === 's') {
+        e.preventDefault();
+        document.getElementById('show-answer-button').click();
+    }
+    
+    // 按N键触发下一题（不区分大小写）
+    if (e.key.toLowerCase() === 'n') {
+        e.preventDefault();
+        document.getElementById('next-button').click();
+    }
+});
+
 // 暗色模式逻辑
 const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const savedMode = localStorage.getItem('darkMode');
