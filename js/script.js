@@ -18,7 +18,8 @@ const examSets = {
     "qgl253-260": qgl253_260,
     "qgl261-268": qgl261_268,
     "qgl269-276": qgl269_276,
-    "qgl277-284": qgl277_284
+    "qgl277-284": qgl277_284,
+    "qgl285-292": qgl285_292
 };
 
 let currentIndex = 0;
