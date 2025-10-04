@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "C:\\Users\\SQJ\\OneDrive\\文档\\WebProgrammes\\qgl\\index.html"
+            "file": "C:\\Users\\sunqi\\OneDrive\\文档\\WebProgrammes\\qgl\\index.html"
         }
     ]
 }
