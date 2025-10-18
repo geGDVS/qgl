@@ -100,7 +100,7 @@ function goToBook() {
 }
 
 function goToOldPage() {
-    window.location.href = 'index.html';
+    window.location.href = 'old.html';
 }
 
 // 初始化页面

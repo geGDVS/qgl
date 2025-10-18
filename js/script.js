@@ -104,7 +104,7 @@ function goToBook() {
 }
 
 function goToNewPage() {
-    window.location.href = 'beta.html';
+    window.location.href = 'index.html';
 }
 
 // 初始化页面

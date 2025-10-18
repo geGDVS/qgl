@@ -115,7 +115,7 @@ button:hover {
 /* 下拉箭头样式 */
 .select-arrow {
     position: absolute;
-    top: 12%;
+    top: 10%;
     right: 16px;
     transform: translateY(-50%);
     pointer-events: none;
