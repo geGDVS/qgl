@@ -25,5 +25,7 @@ const examSets = {
     "qgl277-284": qgl277_284,
     "qgl285-292": qgl285_292,
     "qgl293-300": qgl293_300,
-    "qgl301-313": qgl301_313
+    "qgl301-308": qgl301_308,
+    "qgl309-313": qgl309_313,
+    "qglFinal": qglFinal
 };
