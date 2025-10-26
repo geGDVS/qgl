@@ -64,29 +64,22 @@
                 <mdui-menu-item href="guide.html" target="_blank">自定义单词集</mdui-menu-item>
             </mdui-menu>
             <mdui-button id="close-button" variant="tonal" style="margin: 16px;" >
+                <mdui-icon slot="icon" name="close"></mdui-icon>
                 关闭侧边栏
             </mdui-button>
         </mdui-navigation-drawer>
         
         <!-- 功能按钮 -->
         <div class="control-panel">
-            <div style="margin-top: 8px;">
-                <mdui-button id="choose-button" variant="tonal" icon="list" full-width>
-                    选择单词集
-                </mdui-button>
-                <mdui-button id="book-button" variant="tonal" style="margin-top: 8px;" icon="remove_red_eye" full-width>
-                    查看当前单词集
-                </mdui-button>
-                <mdui-button id="old-button" variant="tonal" style="margin-top: 8px;" icon="history" full-width>
-                    旧版页面
-                </mdui-button>
-            </div>
+            <mdui-button-icon id="choose-button" variant="tonal" icon="list" style="margin: 5px;"></mdui-button-icon>
+            <mdui-button-icon id="book-button" variant="outlined" icon="remove_red_eye" style="margin: 5px;"></mdui-button-icon>
+            <mdui-button-icon id="old-button" variant="outlined" icon="history" style="margin: 5px;"></mdui-button-icon>
         </div>
 
         <!-- 切换按钮区 -->
         <div class="toggle-panel">
-            <mdui-button-icon id="dark-mode-toggle" data-audio="static/audio/zi.wav" icon="dark_mode"></mdui-button-icon>
-            <mdui-button-icon id="volume-toggle" icon="volume_up"></mdui-button-icon>
+            <mdui-button-icon id="dark-mode-toggle" data-audio="static/audio/zi.wav" icon="dark_mode" style="margin: 5px;"></mdui-button-icon>
+            <mdui-button-icon id="volume-toggle" icon="volume_up" style="margin: 5px;"></mdui-button-icon>
         </div>
         
         <!-- 主内容区 -->
