@@ -1,3 +1,7 @@
+body {
+    text-autospace: normal;
+}
+
 .app-container {
     min-height: 100vh;
     display: flex;

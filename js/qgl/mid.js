@@ -3,6 +3,7 @@ const qglMid = [
 ];
 
 const examSets = {
+    "qgl1-8": qgl1_8,
     "qgl137-144": qgl137_144,
     "qgl145-152": qgl145_152,
     "qgl153-160": qgl153_160,
