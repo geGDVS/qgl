@@ -1,5 +1,14 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('fonts/Minecraft.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     text-autospace: normal;
+    font-family: 'Minecraft', sans-serif;
 }
 
 .app-container {
@@ -66,3 +75,8 @@ footer {
     margin: 16px 0;
 }
 
+/* 指南页面卡片靠左对齐 */
+.guide-card {
+    text-align: left !important;
+    max-width: 800px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYDS6C2K9N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KYDS6C2K9N');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEWT 高二特供</title>
+    
+    <!-- MDUI 2 CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css" />
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    
+    <!-- 图标 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="static/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="static/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="static/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="SEWT" />
+    <link rel="manifest" href="static/favicon/site.webmanifest" />
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/beta.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <mdui-navigation-drawer modal close-on-esc close-on-overlay-click>
+            <h1 style="padding: 16px 24px;">CHOOSE</h1>
+            <mdui-menu selects="single" id="exam-set-select" style="margin: 16px;" data-audio="static/audio/sword.wav" dense>
+                <mdui-menu-item value="qgl1-15">SEWT P1-15</mdui-menu-item>
+                <mdui-menu-item value="qgl16-30">SEWT P16-30</mdui-menu-item>
+            </mdui-menu>
+            <mdui-button id="close-button" variant="tonal" style="margin: 16px;" >
+                <mdui-icon slot="icon" name="close"></mdui-icon>
+                CLOSE
+            </mdui-button>
+        </mdui-navigation-drawer>
+        
+        <!-- 功能按钮 -->
+        <div class="control-panel">
+            <mdui-button-icon id="choose-button" variant="tonal" icon="list" style="margin: 5px;"></mdui-button-icon>
+            <mdui-button-icon id="home-button" variant="outlined" icon="home" style="margin: 5px;"></mdui-button-icon>
+        </div>
+
+        <!-- 切换按钮区 -->
+        <div class="toggle-panel">
+            <mdui-button-icon id="dark-mode-toggle" data-audio="static/audio/zi.wav" icon="dark_mode" style="margin: 5px;"></mdui-button-icon>
+            <mdui-button-icon id="volume-toggle" icon="volume_up" style="margin: 5px;"></mdui-button-icon>
+        </div>
+        
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <mdui-card class="card mdui-prose">
+                <h1 style="margin-bottom: 24px;">FUCK SEWT</h1>
+                
+                <p id="question-type" class="question-type"></p>
+                <p id="chinese-word" class="chinese-word"></p>
+                <p id="hint" class="hint-text"></p>
+
+                <mdui-segmented-button-group>
+                    <mdui-segmented-button id="show-answer-button" data-audio="static/audio/pong2.wav">
+                        <u>S</u>HOW ANS
+                    </mdui-segmented-button>
+                    <mdui-segmented-button id="next-button" data-audio="static/audio/pong1.wav" end-icon="arrow_forward">
+                        <u>N</u>EXT
+                    </mdui-segmented-button>
+                </mdui-segmented-button-group>
+                
+                <p id="result-message" class="result-message"></p>
+            </mdui-card>
+        </div>
+
+    </div>
+    
+    <!-- 单词集数据 -->
+    <script src="js/qgl2/p1_15.js"></script>
+    <script src="js/qgl2/p16_30.js"></script>
+    
+    <!-- 主脚本 -->
+    <script src="js/beta2.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

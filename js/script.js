@@ -1,11 +1,12 @@
 let currentIndex = 0;
-// 从本地存储获取用户上次选择的单词集
-let savedExamSet = localStorage.getItem('selectedExamSet');
-// 默认选择考察集，如果没有存储记录则选择最后一个考察集
-let currentExamSet = savedExamSet ? examSets[savedExamSet] : examSets[Object.keys(examSets)[Object.keys(examSets).length - 1]];
+// 如果保存的单词集不存在或为空，则使用最新单词集
+let currentExamSet = (savedExamSet && examSets[savedExamSet]) ? examSets[savedExamSet] : examSets[0];
 let isMuted = localStorage.getItem('isMuted') === 'true';
 const volumeButton = document.getElementById('volume-toggle');
-volumeButton.textContent = isMuted ? 'Unmute🔊' : 'Mute🔇';
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+darkModeToggle.addEventListener('click', handleDarkModeToggle);
+volumeButton.icon = isMuted ? 'volume_off' : 'volume_up';
+
 
 // 显示当前中文单词及考察类型
 function showCurrentWord() {
@@ -13,6 +14,7 @@ function showCurrentWord() {
     const questionTypeElement = document.getElementById('question-type');
     const hintElement = document.getElementById('hint');
     const currentPair = currentExamSet[currentIndex];
+    
     chineseWordElement.textContent = currentPair.chinese;
     questionTypeElement.textContent = `${currentPair.type}`;
 
@@ -25,14 +27,9 @@ function showCurrentWord() {
         // 考察单词时，提示首字母
         hint = `${currentPair.english[0]}-`;
     }
-    if (hint) {
-        hintElement.textContent = `HINT: ${hint}`;
-    } else {
-        hintElement.textContent = '';
-    }
-
-    const resultElement = document.getElementById('result-message');
-    resultElement.textContent = '';
+    
+    hintElement.textContent = hint ? `HINT: ${hint}` : '';
+    document.getElementById('result-message').textContent = '';
 }
 
 // 显示答案
@@ -53,18 +50,6 @@ function showNextWord() {
     showCurrentWord();
 }
 
-// 处理考察集选择事件
-function handleExamSetChange() {
-    playAudio('exam-set-select');
-    const selectElement = document.getElementById('exam-set-select');
-    const selectedSet = selectElement.value;
-    currentExamSet = examSets[selectedSet];
-    currentIndex = 0; // 切换考察集后重置索引
-    showCurrentWord();
-    // 保存用户选择的单词集到本地存储
-    localStorage.setItem('selectedExamSet', selectedSet);
-}
-
 // 播放音频函数
 function playAudio(buttonId) {
     if (isMuted) return;
@@ -76,13 +61,16 @@ function playAudio(buttonId) {
     }
 }
 
+// 处理暗色模式切换
 function handleDarkModeToggle() {
     playAudio('dark-mode-toggle');
-    document.body.classList.toggle('dark-mode');
-    if (document.body.classList.contains('dark-mode')) {
+    document.documentElement.classList.toggle('mdui-theme-dark');
+    if (document.documentElement.classList.contains('mdui-theme-dark')) {
         localStorage.setItem('darkMode', 'enabled');
+        darkModeToggle.icon = 'dark_mode';
     } else {
         localStorage.setItem('darkMode', 'disabled');
+        darkModeToggle.icon = 'brightness_5';
     }
 }
 
@@ -90,44 +78,21 @@ function handleDarkModeToggle() {
 function handleVolumeToggle() {
     isMuted = !isMuted;
     localStorage.setItem('isMuted', isMuted);
-    volumeButton.textContent = isMuted ? 'Unmute🔊' : 'Mute🔇';
+    volumeButton.icon = isMuted ? 'volume_off' : 'volume_up';
 }
 
-// 前往指导页面
-function goToGuidePage() {
-    window.location.href = 'guide.html';
-}
-
-function goToBook() {
-    const selectElement = document.getElementById('exam-set-select');
-    window.open(`static/book/全攻略P${selectElement.value.slice(3)}.pdf`, '_blank');
-}
-
-function goToNewPage() {
-    window.location.href = 'index.html';
-}
 
 // 初始化页面
 function initPage() {
     // 设置 select 元素的选中项
     const selectElement = document.getElementById('exam-set-select');
-    const selectedSet = savedExamSet || Object.keys(examSets)[Object.keys(examSets).length - 1];
+    const selectedSet = (savedExamSet && examSets[savedExamSet]) ? savedExamSet : Object.keys(examSets)[0];
     selectElement.value = selectedSet;
 
     showCurrentWord();
 }
 
-
 // 添加事件监听器
-const guideButton = document.getElementById('guide-button');
-guideButton.addEventListener('click', goToGuidePage);
-
-const bookButton = document.getElementById('book-button');
-bookButton.addEventListener('click', goToBook);
-
-const newButton = document.getElementById('new-button');
-newButton.addEventListener('click', goToNewPage);
-
 const showAnswerButton = document.getElementById('show-answer-button');
 showAnswerButton.addEventListener('click', showAnswer);
 
@@ -137,11 +102,16 @@ nextButton.addEventListener('click', showNextWord);
 const examSetSelect = document.getElementById('exam-set-select');
 examSetSelect.addEventListener('change', handleExamSetChange);
 
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-darkModeToggle.addEventListener('click', handleDarkModeToggle);
-
 const volumeToggle = document.getElementById('volume-toggle');
 volumeToggle.addEventListener('click', handleVolumeToggle);
+
+// 侧边栏逻辑
+const navigationDrawer = document.querySelector("mdui-navigation-drawer");
+const openButton = document.getElementById("choose-button");
+const closeButton = document.getElementById("close-button");
+
+openButton.addEventListener("click", () => navigationDrawer.open = true);
+closeButton.addEventListener("click", () => navigationDrawer.open = false);
 
 // 键盘事件监听
 document.addEventListener('keydown', function(e) {
@@ -159,18 +129,21 @@ document.addEventListener('keydown', function(e) {
 });
 
 // 暗色模式逻辑
-const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const savedMode = localStorage.getItem('darkMode');
 
 if (savedMode === 'enabled') {
-    document.body.classList.add('dark-mode');
+    document.documentElement.classList.add('mdui-theme-dark');
+    darkModeToggle.icon = 'dark_mode';
 } else if (savedMode === 'disabled') {
-    document.body.classList.remove('dark-mode');
+    document.documentElement.classList.remove('mdui-theme-dark');
+    darkModeToggle.icon = 'brightness_5';
 } else {
-    if (prefersDarkMode) {
-        document.body.classList.add('dark-mode');
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('mdui-theme-dark');
+        darkModeToggle.icon = 'dark_mode';
     } else {
-        document.body.classList.remove('dark-mode');
+        document.documentElement.classList.remove('mdui-theme-dark');
+        darkModeToggle.icon = 'brightness_5';
     }
 }
 
