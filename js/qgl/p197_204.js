@@ -373,4 +373,3 @@ const qgl197_204 = [
     { "chinese": "他整天就想着发财。", "english": "He was possessed by the thought of getting rich.", "type": "句子", "keyWords": ["possess"] },
     { "chinese": "n. [U]占有；拥有；n. [C](常pl.)财产", "english": "possession", "type": "单词", "keyWords": [] } 
 ];
-qgl197_204.sort(() => Math.random() - 0.5);

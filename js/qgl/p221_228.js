@@ -349,4 +349,3 @@ const qgl221_228 = [
     { "chinese": "vi. 研究；调查；探索（into/on）", "english": "research", "type": "单词", "keyWords": [] },
     { "chinese": "n. [C] 一项研究", "english": "research", "type": "单词", "keyWords": [] }
 ];
-qgl221_228.sort(() => Math.random() - 0.5);

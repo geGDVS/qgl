@@ -338,4 +338,3 @@ const qgl189_196 = [
     { "chinese": "旅客列车", "english": "a passenger train", "type": "短语", "keyWords": ["passenger"] },
     { "chinese": "n. [U](可与a连用)热情；激情；passionate a.充满热情的", "english": "passion", "type": "单词", "keyWords": [] } 
 ];
-qgl189_196.sort(() => Math.random() - 0.5);

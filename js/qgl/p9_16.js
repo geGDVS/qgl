@@ -10,7 +10,7 @@ const qgl9_16 = [
     { "chinese": "n.广告业，广告；a.广告的", "english": "advertising", "type": "单词", "keyWords": [] },
     { "chinese": "广告商，广告公司", "english": "advertising agency", "type": "短语", "keyWords": ["advertising"] },
     { "chinese": "n.广告", "english": "advertisement", "type": "单词", "keyWords": [] },
-    { "chinese": "在报纸上登广告", "english": "put (in) an advertisement in the newspaper", "type": "短语", "keyWords": ["advertisement"] },
+    { "chinese": "在报纸上登广告", "english": "put an advertisement in the newspaper", "type": "短语", "keyWords": ["advertisement"] },
     { "chinese": "n.劝告，忠告；意见", "english": "advice", "type": "单词", "keyWords": [] },
     { "chinese": "听某人的忠告", "english": "follow/ take/ seek one's advice", "type": "短语", "keyWords": ["advice"] },
     { "chinese": "给…一些忠告", "english": "give some advice on sth.", "type": "短语", "keyWords": ["advice"] },
@@ -323,4 +323,3 @@ const qgl9_16 = [
     { "chinese": "渴望得到；为…担心", "english": "be anxious for sth.", "type": "短语", "keyWords": ["anxious"] },
     { "chinese": "a.什么，一些，一点；任何的；随便哪一个；一般的，普通的；pron.无论哪个，任何，（无论）多少；adv.一些，少许，略微", "english": "any", "type": "单词", "keyWords": [] }
 ];
-qgl9_16.sort(() => Math.random() - 0.5);

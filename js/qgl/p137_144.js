@@ -379,4 +379,3 @@ const qgl137_144 = [
     { "chinese": "n. 牙医；化学家", "english": "dentist, chemist", "type": "单词", "keyWords": [] },
     { "chinese": "a. 共产主义的", "english": "communist", "type": "单词", "keyWords": [] } 
 ];
-qgl137_144.sort(() => Math.random() - 0.5);

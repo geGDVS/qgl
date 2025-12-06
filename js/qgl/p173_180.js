@@ -337,4 +337,3 @@ const qgl173_180 = [
     { "chinese": "净利润", "english": "net profit", "type": "短语", "keyWords": ["net"] },
     { "chinese": "n.[C]网状组织；网络", "english": "network", "type": "单词", "keyWords": [] } 
 ];
-qgl173_180.sort(() => Math.random() - 0.5);

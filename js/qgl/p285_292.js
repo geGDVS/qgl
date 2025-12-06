@@ -309,4 +309,3 @@ const qgl285_292 = [
     { "chinese": "adj.不同的；各种各样的；多方面的", "english": "various", "type": "单词", "keyWords": [] },
     { "chinese": "v.使不同；改变；使多样化；呈差异；变化，有不同", "english": "vary", "type": "单词", "keyWords": [] }
 ];
-qgl285_292.sort(() => Math.random() - 0.5);

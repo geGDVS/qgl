@@ -401,4 +401,3 @@ const qgl245_252 = [
     { "chinese": "n.[U]英式足球", "english": "soccer", "type": "单词", "keyWords": [] },
     { "chinese": "a.好交际的；社交的，合群的", "english": "sociable", "type": "单词", "keyWords": [] }
 ];
-qgl245_252.sort(() => Math.random() - 0.5);

@@ -372,4 +372,3 @@ const qgl229_236 = [
     { "chinese": "n. 盐 v. 在…中/上加盐；腌", "english": "salt", "type": "单词", "keyWords": [] },
     { "chinese": "a. 含盐的；咸的", "english": "salty", "type": "单词", "keyWords": [] }
 ];
-qgl229_236.sort(() => Math.random() - 0.5);

@@ -216,7 +216,7 @@ const qgl1_8 = [
     { "chinese": "在政界相当活跃", "english": "be active in politics", "type": "短语", "keyWords": ["active"] },
     { "chinese": "积极参加", "english": "take an active part in", "type": "短语", "keyWords": ["active"] },
     { "chinese": "v. 刺激，使活动", "english": "activate", "type": "单词", "keyWords": ["active"] },
-    { "chinese": "他的崇高精神大大激励了别人。", "english": "His lofty spirit has really activated others.", "type": "句子", "keyWords": ["activate"] },
+    { "chinese": "他的崇高精神大大激励了别人。", "english": "His lofty spirit has greatly activated others.", "type": "句子", "keyWords": ["activate"] },
     { "chinese": "n. [C] 活动", "english": "activity", "type": "单词", "keyWords": ["active"] },
     { "chinese": "社交活动，社会活动", "english": "social activities", "type": "短语", "keyWords": ["activity"] },
     { "chinese": "n. [C] 男演员", "english": "actor", "type": "单词", "keyWords": ["act"] },
@@ -324,4 +324,3 @@ const qgl1_8 = [
     { "chinese": "占/获得/赢得优势", "english": "have/ gain/ win an advantage over", "type": "短语", "keyWords": ["advantage"] },
     { "chinese": "陶器的优点在于比木器更容易保持清洁。", "english": "Earthenware has an advantage over wood in being more easily kept clean.", "type": "句子", "keyWords": ["advantage"] }
 ];
-qgl1_8.sort(() => Math.random() - 0.5);

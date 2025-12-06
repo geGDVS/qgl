@@ -359,4 +359,3 @@ const qgl269_276 = [
     { "chinese": "三分之二", "english": "two thirds", "type": "短语", "keyWords": ["third"] },
     { "chinese": "第三世界", "english": "the Third World", "type": "短语", "keyWords": ["third"] }
 ];
-qgl269_276.sort(() => Math.random() - 0.5);

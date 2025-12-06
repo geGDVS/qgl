@@ -279,4 +279,3 @@ const qgl145_152 = [
     { "chinese": "四车道高速公路", "english": "a four - lane motorway", "type": "短语", "keyWords": ["lane"] },
     { "chinese": "n. 语言；[U](运用语言的) 方式；能力；风格", "english": "language", "type": "单词", "keyWords": [] }
 ];
-qgl145_152.sort(() => Math.random() - 0.5);

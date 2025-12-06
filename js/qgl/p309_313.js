@@ -84,4 +84,3 @@ const qgl309_313 = [
     { "chinese": "n. [C] 动物园（=zoological garden）", "english": "zoo /zuː/", "type": "单词", "keyWords": [] },
     { "chinese": "n. [U] 动物学", "english": "zoology /zuˈɒlədʒi/", "type": "单词", "keyWords": [] }
 ];
-qgl309_313.sort(() => Math.random() - 0.5);

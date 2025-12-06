@@ -384,4 +384,3 @@ const qgl253_260 = [
     { "chinese": "贮存，贮藏某物(近reserve, stock)", "english": "keep/have sth. in store", "type": "短语", "keyWords": ["store"] },
     { "chinese": "n.[C]零售商；零售店店主", "english": "storekeeper /'stɔ:ki:pə/", "type": "单词", "keyWords": ["store"] }
 ];
-qgl253_260.sort(() => Math.random() - 0.5);

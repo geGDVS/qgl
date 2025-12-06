@@ -308,4 +308,3 @@ const qgl165_172 = [
     { "chinese": "表示“错；误；失”，如：misspell拼写错误，misprint印刷错误，misunderstand误解，mislead误导，misuse错用", "english": "mis-", "type": "前缀", "keyWords": [] },
     { "chinese": "n. [C]印刷错误；v. 印刷错误", "english": "misprint", "type": "单词", "keyWords": [] } 
 ];
-qgl165_172.sort(() => Math.random() - 0.5);

@@ -365,4 +365,3 @@ const qgl261_268 = [
     { "chinese": "n. [C]系统，体系；制度", "english": "system /'sɪstəm/", "type": "单词", "keyWords": [] },
     { "chinese": "a. 系统的，体系的", "english": "systematic /ˌsɪstə'mætɪk/", "type": "单词", "keyWords": ["system"] }
 ];
-qgl261_268.sort(() => Math.random() - 0.5);

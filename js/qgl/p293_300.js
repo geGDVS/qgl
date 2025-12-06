@@ -343,4 +343,3 @@ const qgl293_300 = [
     { "chinese": "n.[C]/a.西，西方(的);ad.向西方", "english": "west /west/", "type": "单词", "keyWords": [] },
     { "chinese": "城西有个大公园。", "english": "West of the city lies a large park.", "type": "句子", "keyWords": ["west"] }
 ];
-qgl293_300.sort(() => Math.random() - 0.5);

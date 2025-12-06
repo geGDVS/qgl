@@ -350,4 +350,3 @@ const qgl301_308 = [
     { "chinese": "v. 造成（船舶等）失事；n. [C] 遇难船只；残骸；n. [U] 破坏，毁坏", "english": "wreck /rek/", "type": "单词", "keyWords": [] },
     { "chinese": "失事船舶", "english": "a wrecked ship", "type": "短语", "keyWords": ["wreck"] }
 ];
-qgl301_308.sort(() => Math.random() - 0.5);

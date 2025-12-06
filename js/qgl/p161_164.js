@@ -165,4 +165,3 @@ const qgl161_164 = [
     { "chinese": "细胞构成了人体组织。", "english": "Cells make up human tissue.", "type": "句子", "keyWords": ["make"] },
     { "chinese": "人体组织是由细胞构成的。", "english": "Human tissue is made up of cells.", "type": "句子", "keyWords": ["make"] } 
 ];
-qgl161_164.sort(() => Math.random() - 0.5);

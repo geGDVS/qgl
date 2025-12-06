@@ -5,6 +5,7 @@ const qglMid = [
 const examSets = {
     "qgl1-8": qgl1_8,
     "qgl9-16": qgl9_16,
+    "qgl17-24": qgl17_24,
     "qgl137-144": qgl137_144,
     "qgl145-152": qgl145_152,
     "qgl153-160": qgl153_160,
@@ -31,3 +32,8 @@ const examSets = {
     "qgl309-313": qgl309_313,
     "qglFinal": qglFinal
 };
+
+// 打乱所有测试集
+for (const setKey in examSets) {
+    examSets[setKey].sort(() => Math.random() - 0.5);
+}

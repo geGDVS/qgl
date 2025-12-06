@@ -326,4 +326,3 @@ const qgl181_188 = [
     { "chinese": "一听到那消息，她就坐立不安", "english": "On hearing the news, she was on pins and needles.", "type": "句子", "keyWords": ["on"] },
     { "chinese": "我一到家就发现家中被盗", "english": "On my arrival home/On arriving home I discovered the burglary.", "type": "句子", "keyWords": ["on"] }
 ];
-qgl181_188.sort(() => Math.random() - 0.5);

@@ -373,4 +373,3 @@ const qgl205_212 = [
     { "chinese": "(火车) 进站；(车辆等) 驶向路边停车", "english": "pull in", "type": "短语", "keyWords": ["pull"] },
     { "chinese": "汽车开到车库停住了。", "english": "The car pulled in at the garage.", "type": "句子", "keyWords": ["pull"] }
 ];
-qgl205_212.sort(() => Math.random() - 0.5);

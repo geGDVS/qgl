@@ -258,4 +258,3 @@ const qgl213_220 = [
     { "chinese": "非常热的一天", "english": "rather (quite) a hot day/ a rather hot day", "type": "短语", "keyWords": ["rather"] },
     { "chinese": "更糟糕/太差(可修饰比较级和too短语)", "english": "rather worse/ rather too bad", "type": "短语", "keyWords": ["rather"] }
 ];
-qgl213_220.sort(() => Math.random() - 0.5);

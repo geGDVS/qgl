@@ -395,4 +395,3 @@ const qgl153_160 = [
     { "chinese": "照顾", "english": "look after", "type": "短语", "keyWords": ["look"] },
     { "chinese": "调查", "english": "look into", "type": "短语", "keyWords": ["look"] } 
 ];
-qgl153_160.sort(() => Math.random() - 0.5);

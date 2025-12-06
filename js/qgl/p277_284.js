@@ -348,4 +348,3 @@ const qgl277_284 = [
     { "chinese": "海岸线的走向", "english": "the trend of a coast-line", "type": "短语", "keyWords": ["trend"] },
     { "chinese": "现代生活的趋势", "english": "the trend of modern living", "type": "短语", "keyWords": ["trend"] },
 ];
-qgl277_284.sort(() => Math.random() - 0.5);
