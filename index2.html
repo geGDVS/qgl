@@ -12,7 +12,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEWT 高二特供</title>
+    <title>SEWT Review</title>
     
     <!-- MDUI 2 CSS -->
     <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css" />
@@ -38,6 +38,7 @@
             <mdui-menu selects="single" id="exam-set-select" style="margin: 16px;" data-audio="static/audio/sword.wav" dense>
                 <mdui-menu-item value="qgl1-15">SEWT P1-15</mdui-menu-item>
                 <mdui-menu-item value="qgl16-30">SEWT P16-30</mdui-menu-item>
+                <mdui-menu-item value="qgl31-45">SEWT P31-45</mdui-menu-item>
             </mdui-menu>
             <mdui-button id="close-button" variant="tonal" style="margin: 16px;" >
                 <mdui-icon slot="icon" name="close"></mdui-icon>
@@ -66,7 +67,7 @@
                 <p id="chinese-word" class="chinese-word"></p>
                 <p id="hint" class="hint-text"></p>
 
-                <mdui-segmented-button-group>
+                <mdui-segmented-button-group id="seg-group">
                     <mdui-segmented-button id="show-answer-button" data-audio="static/audio/pong2.wav">
                         <u>S</u>HOW ANS
                     </mdui-segmented-button>
@@ -77,6 +78,8 @@
                 
                 <p id="result-message" class="result-message"></p>
             </mdui-card>
+            <mdui-fab size="large" icon="slideshow" id="show-fab" class="mobile-fab mobile-left"></mdui-fab>
+            <mdui-fab size="large" icon="arrow_forward" id="next-fab" class="mobile-fab mobile-right"></mdui-fab>
         </div>
 
     </div>
@@ -84,6 +87,7 @@
     <!-- 单词集数据 -->
     <script src="js/qgl2/p1_15.js"></script>
     <script src="js/qgl2/p16_30.js"></script>
+    <script src="js/qgl2/p31_45.js"></script>
     
     <!-- 主脚本 -->
     <script src="js/beta2.js"></script>

@@ -147,5 +147,24 @@ if (savedMode === 'enabled') {
     }
 }
 
+// 根据设备/视口切换移动模式：隐藏分段按钮，显示底部 FAB
+function adjustForMobile() {
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth <= 600;
+    if (isMobile) {
+        document.body.classList.add('mobile-mode');
+    } else {
+        document.body.classList.remove('mobile-mode');
+    }
+}
+
+// 绑定 FAB（如果存在）到已有的操作
+const showFab = document.getElementById('show-fab');
+if (showFab) showFab.addEventListener('click', () => document.getElementById('show-answer-button') && document.getElementById('show-answer-button').click());
+const nextFab = document.getElementById('next-fab');
+if (nextFab) nextFab.addEventListener('click', () => document.getElementById('next-button') && document.getElementById('next-button').click());
+
+window.addEventListener('resize', adjustForMobile);
+adjustForMobile();
+
 // 初始化页面
 initPage();

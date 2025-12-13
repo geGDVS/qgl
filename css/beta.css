@@ -71,6 +71,7 @@ footer {
 }
 
 .result-message {
+    font-size: 20px;
     min-height: 24px;
     margin: 16px 0;
 }
@@ -80,3 +81,23 @@ footer {
     text-align: left !important;
     max-width: 800px;
 }
+
+    /* 移动端 FAB 控制：默认隐藏，进入 mobile-mode 时显示并固定到左右下角 */
+    #show-fab, #next-fab {
+        display: none;
+    }
+
+    body.mobile-mode #seg-group {
+        display: none !important;
+    }
+
+    body.mobile-mode #show-fab,
+    body.mobile-mode #next-fab {
+        display: inline-block;
+        position: fixed;
+        bottom: 20px;
+        z-index: 1200;
+    }
+
+    #show-fab.mobile-left { left: 20px; }
+    #next-fab.mobile-right { right: 20px; }

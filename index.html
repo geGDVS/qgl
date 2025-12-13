@@ -40,6 +40,8 @@
                 <mdui-menu-item value="qgl9-16">SEWT P9-16</mdui-menu-item>
                 <mdui-menu-item value="qgl17-24">SEWT P17-24</mdui-menu-item>
                 <mdui-menu-item value="qgl25-32">SEWT P25-32</mdui-menu-item>
+                <mdui-menu-item value="qgl33-40">SEWT P33-40</mdui-menu-item>
+                <mdui-menu-item value="qgl41-48">SEWT P41-48</mdui-menu-item>
                 <mdui-menu-item value="qgl137-144">SEWT P137-144</mdui-menu-item>
                 <mdui-menu-item value="qgl145-152">SEWT P145-152</mdui-menu-item>
                 <mdui-menu-item value="qgl153-160">SEWT P153-160</mdui-menu-item>
@@ -77,7 +79,9 @@
         <div class="control-panel">
             <mdui-button-icon id="choose-button" variant="tonal" icon="list" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="book-button" variant="outlined" icon="remove_red_eye" style="margin: 5px;"></mdui-button-icon>
-            <mdui-button-icon id="new-button" variant="outlined" icon="upgrade" style="margin: 5px;"></mdui-button-icon>
+            <mdui-tooltip content="Review Mode">
+                <mdui-button-icon id="new-button" variant="outlined" icon="upgrade" style="margin: 5px;"></mdui-button-icon>
+            </mdui-tooltip>
         </div>
 
         <!-- 切换按钮区 -->
@@ -96,7 +100,7 @@
                 <p id="chinese-word" class="chinese-word"></p>
                 <p id="hint" class="hint-text"></p>
 
-                <mdui-segmented-button-group>
+                <mdui-segmented-button-group id="seg-group">
                     <mdui-segmented-button id="show-answer-button" data-audio="static/audio/pong2.wav">
                         <u>S</u>HOW ANS
                     </mdui-segmented-button>
@@ -107,12 +111,14 @@
                 
                 <p id="result-message" class="result-message"></p>
             </mdui-card>
+            <mdui-fab size="large" icon="slideshow" id="show-fab" class="mobile-fab mobile-left"></mdui-fab>
+            <mdui-fab size="large" icon="arrow_forward" id="next-fab" class="mobile-fab mobile-right"></mdui-fab>
         </div>
 
         <!-- 关于对话框 -->
         <mdui-dialog close-on-esc close-on-overlay-click id="about-dialog">
             <span slot="headline">关于Test for SEWT</span>
-            <p>当前版本：2.3.0 (2025.12)</p>
+            <p>当前版本：2.4.0 (2025.12)</p>
             <p>本网页旨在帮助用户复习和测试“番茄炒蛋”中的单词和短语。</p>
 
             <h3>版权信息</h3>
@@ -133,6 +139,8 @@
     <script src="js/qgl/p9_16.js"></script>
     <script src="js/qgl/p17_24.js"></script>
     <script src="js/qgl/p25_32.js"></script>
+    <script src="js/qgl/p33_40.js"></script>
+    <script src="js/qgl/p41_48.js"></script>
     <script src="js/qgl/p137_144.js"></script>
     <script src="js/qgl/p145_152.js"></script>
     <script src="js/qgl/p153_160.js"></script>

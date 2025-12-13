@@ -1,6 +1,6 @@
 const qgl16_30 = [
     { "chinese": "n.脚踝", "english": "ankle", "type": "单词", "keyWords": [] },
-    { "chinese": "n.周年纪念（日）；a.周年的；每年的", "english": "anniversary", "type": "单词", "keyWords": [] },
+    { "chinese": "n.周年纪念（日）", "english": "anniversary", "type": "单词", "keyWords": [] },
     { "chinese": "婚周年纪念", "english": "a wedding anniversary", "type": "短语", "keyWords": ["anniversary"] },
     { "chinese": "周年纪念礼物", "english": "an anniversary gift", "type": "短语", "keyWords": ["anniversary"] },
     { "chinese": "v.宣布，通告；预告；显示", "english": "announce", "type": "单词", "keyWords": [] },
@@ -637,8 +637,8 @@ const qgl16_30 = [
     { "chinese": "这棵树不结果。", "english": "This tree has borne no fruit.", "type": "句子", "keyWords": ["bear"] },
     { "chinese": "承受上面楼层的重量", "english": "bear the weight of the upper floors", "type": "短语", "keyWords": ["bear"] },
     { "chinese": "我心里谁也不恨。", "english": "I bear no hatred towards anybody./I bear hatred against no man.", "type": "句子", "keyWords": ["bear"] },
-    { "chinese": "承担...的费用/责任", "english": "bear the cost/ responsibility of...", "type": "短语", "keyWords": ["bear"] },
-    { "chinese": "你须负起养育孩子的责任。", "english": "You have to bear the responsibility of bringing up your child.", "type": "句子", "keyWords": ["bear"] },
+    { "chinese": "承担...的费用/责任", "english": "bear the cost of/ responsibility for...", "type": "短语", "keyWords": ["bear"] },
+    { "chinese": "你须负起养育孩子的责任。", "english": "You have to bear the responsibility for bringing up your child.", "type": "句子", "keyWords": ["bear"] },
     { "chinese": "受不了", "english": "can't bear (sb.) doing sth.", "type": "短语", "keyWords": ["bear"] },
     { "chinese": "生来平等", "english": "be born equal", "type": "短语", "keyWords": ["bear"] },
     { "chinese": "牢记...", "english": "bear/ keep sth. in mind; bear/ keep in mind that...", "type": "短语", "keyWords": ["bear"] },

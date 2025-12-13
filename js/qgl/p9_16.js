@@ -286,7 +286,7 @@ const qgl9_16 = [
     { "chinese": "家畜", "english": "domestic animals", "type": "短语", "keyWords": ["animal"] },
     { "chinese": "野生动物", "english": "wild animals", "type": "短语", "keyWords": ["animal"] },
     { "chinese": "n.脚踝", "english": "ankle", "type": "单词", "keyWords": [] },
-    { "chinese": "n.周年纪念（日）；a.周年的；每年的", "english": "anniversary", "type": "单词", "keyWords": [] },
+    { "chinese": "n.周年纪念（日）", "english": "anniversary", "type": "单词", "keyWords": [] },
     { "chinese": "婚周年纪念", "english": "a wedding anniversary", "type": "短语", "keyWords": ["anniversary"] },
     { "chinese": "周年纪念礼物", "english": "an anniversary gift", "type": "短语", "keyWords": ["anniversary"] },
     { "chinese": "v.宣布，通告；预告；显示", "english": "announce", "type": "单词", "keyWords": [] },
