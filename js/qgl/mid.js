@@ -9,6 +9,8 @@ const examSets = {
     "qgl25-32": qgl25_32,
     "qgl33-40": qgl33_40,
     "qgl41-48": qgl41_48,
+    "qgl49-56": qgl49_56,
+    "qgl57-64": qgl57_64,
     "qgl137-144": qgl137_144,
     "qgl145-152": qgl145_152,
     "qgl153-160": qgl153_160,

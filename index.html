@@ -42,6 +42,8 @@
                 <mdui-menu-item value="qgl25-32">SEWT P25-32</mdui-menu-item>
                 <mdui-menu-item value="qgl33-40">SEWT P33-40</mdui-menu-item>
                 <mdui-menu-item value="qgl41-48">SEWT P41-48</mdui-menu-item>
+                <mdui-menu-item value="qgl49-56">SEWT P49-56</mdui-menu-item>
+                <mdui-menu-item value="qgl57-64">SEWT P57-64</mdui-menu-item>
                 <mdui-menu-item value="qgl137-144">SEWT P137-144</mdui-menu-item>
                 <mdui-menu-item value="qgl145-152">SEWT P145-152</mdui-menu-item>
                 <mdui-menu-item value="qgl153-160">SEWT P153-160</mdui-menu-item>
@@ -118,7 +120,7 @@
         <!-- 关于对话框 -->
         <mdui-dialog close-on-esc close-on-overlay-click id="about-dialog">
             <span slot="headline">关于Test for SEWT</span>
-            <p>当前版本：2.4.0 (2025.12)</p>
+            <p>当前版本：2.4.1 (2025.12)</p>
             <p>本网页旨在帮助用户复习和测试“番茄炒蛋”中的单词和短语。</p>
 
             <h3>版权信息</h3>
@@ -131,6 +133,17 @@
                 <li><a href="https://github.com/IdreesInc/Minecraft-Font" target="_blank">Minecraft Font</a> - Minecraft 风格的像素字体</li>
             </ul>
 
+            <h3>支持作者</h3>
+            <p>如果你喜欢这个项目，欢迎通过以下方式支持作者：</p>
+                <div style="min-width:200px;">
+                    <p style="margin:0 0 8px 0;">以太坊地址：0xb0cD845Aa3891475746b6dFd44088c99AA01f349</p>
+                    <img src="static/img/qrcode.gif" alt="Wallet QR Code" style="width: 60%;height: 60%;display:block;margin:8px auto;" />
+                    <mdui-segmented-button-group full-width>
+                        <mdui-segmented-button id="copy-wallet-btn" icon="content_copy">复制地址</mdui-segmented-button>
+                        <mdui-segmented-button id="open-wallet-btn" href="https://etherscan.io/address/0xb0cD845Aa3891475746b6dFd44088c99AA01f349" target="_blank" icon="open_in_new">在区块浏览器中打开</mdui-segmented-button>
+                    </mdui-segmented-button-group>
+                </div> 
+
         </mdui-dialog>
     </div>
     
@@ -141,6 +154,8 @@
     <script src="js/qgl/p25_32.js"></script>
     <script src="js/qgl/p33_40.js"></script>
     <script src="js/qgl/p41_48.js"></script>
+    <script src="js/qgl/p49_56.js"></script>
+    <script src="js/qgl/p57_64.js"></script>
     <script src="js/qgl/p137_144.js"></script>
     <script src="js/qgl/p145_152.js"></script>
     <script src="js/qgl/p153_160.js"></script>
@@ -170,5 +185,22 @@
     <script src="js/qgl/mid.js"></script>
     <script src="js/beta1.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        (function(){
+            var copyBtn = document.getElementById('copy-wallet-btn');
+            if (copyBtn && navigator.clipboard) {
+                copyBtn.addEventListener('click', function(){
+                    var addr = "0xb0cD845Aa3891475746b6dFd44088c99AA01f349";
+                    navigator.clipboard.writeText(addr).then(function(){
+                        if (window.mdui && mdui.snackbar) mdui.snackbar({message: '地址已复制到剪贴板'});
+                        else alert('地址已复制到剪贴板');
+                    }).catch(function(){
+                        if (window.mdui && mdui.snackbar) mdui.snackbar({message: '复制失败，请手动复制'});
+                        else alert('复制失败，请手动复制');
+                    });
+                });
+            }
+        })();
+    </script>
 </body>
 </html>

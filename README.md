@@ -58,10 +58,22 @@ n.苹果|apple|单词|
    - 优化了答案显示
    - 修复了部分已知问题
 
+- v2.4.1 (2025-12-20)
+   - 增加SEWT P49-56、P57-64、P46-60单词集
+   - 修复了部分已知问题
+
 （更多历史版本可在项目仓库的 Git 提交/发布页面中查看）
 
 ## 版权信息
 本项目采用 MIT 许可证，详情参见 LICENSE 文件。  
 Copyright © 2025 SQJ. All rights reserved.
+
+## 支持作者
+如果你觉得本项目对你有帮助，欢迎通过以下方式支持作者：
+
+- 以太坊地址：**0xb0cD845Aa3891475746b6dFd44088c99AA01f349**
+  ![](https://qgl.pages.dev/static/img/qrcode.gif)
+- 在钱包或区块浏览器中查看： https://etherscan.io/address/0xb0cD845Aa3891475746b6dFd44088c99AA01f349
+
 
 ## 开发不易，star续命🫰
