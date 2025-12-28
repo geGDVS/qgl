@@ -5,6 +5,7 @@ const examSets = {
     "qgl16-30": qgl16_30,
     "qgl31-45": qgl31_45,
     "qgl46-60": qgl46_60,
+    "qgl61-75": qgl61_75,
 };
 
 // 打乱所有测试集

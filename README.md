@@ -34,35 +34,7 @@ n.苹果|apple|单词|
 ```
 
 ## 更新日志
-
-- v2.2.0 (2025-11-01)
-   - 移除了页脚，新增更新日志和版权信息
-   - 增加SEWT P1-8单词集
-   - 暂停对旧版页面的支持
-
-- v2.2.1 (2025-11-02)
-   - 增加SEWT P9-16单词集
-
-- v2.2.2 (2025-12-06)
-   - 增加SEWT P17-24单词集
-   - 修复了部分已知问题
-
-- v2.3.0 (2025-12-06)
-   - 增加SEWT P25-32单词集
-   - 切换Minecraft字体
-   - 新增高二特供页面
-   - 修复了部分已知问题
-
-- v2.4.0 (2025-12-13)
-   - 增加SEWT P33-40、P41-48、P31-45单词集
-   - 优化了答案显示
-   - 修复了部分已知问题
-
-- v2.4.1 (2025-12-20)
-   - 增加SEWT P49-56、P57-64、P46-60单词集
-   - 修复了部分已知问题
-
-（更多历史版本可在项目仓库的 Git 提交/发布页面中查看）
+[UPDATE.md](https://github.com/geGDVS/qgl/blob/main/UPDATE.md)
 
 ## 版权信息
 本项目采用 MIT 许可证，详情参见 LICENSE 文件。  
@@ -72,7 +44,7 @@ Copyright © 2025 SQJ. All rights reserved.
 如果你觉得本项目对你有帮助，欢迎通过以下方式支持作者：
 
 - 以太坊地址：**0xb0cD845Aa3891475746b6dFd44088c99AA01f349**
-  ![](https://qgl.pages.dev/static/img/qrcode.gif)
+- ![](https://qgl.pages.dev/static/img/qrcode.gif)
 - 在钱包或区块浏览器中查看： https://etherscan.io/address/0xb0cD845Aa3891475746b6dFd44088c99AA01f349
 
 
