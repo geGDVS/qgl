@@ -327,12 +327,5 @@ const qgl73_80 = [
     { "chinese": "对某人不利，使某人吃亏", "english": "to sb.'s disadvantage", "type": "短语", "keyWords": ["disadvantage"] },
     { "chinese": "弱势/处于不利地位的群体", "english": "the disadvantaged", "type": "短语", "keyWords": ["disadvantaged"] },
     { "chinese": "vi. 不一致，不适宜", "english": "disagree", "type": "单词", "keyWords": [] },
-    { "chinese": "我不宜吃苹果。", "english": "Apples disagree with me.", "type": "句子", "keyWords": ["disagree"] },
-    { "chinese": "置若罔闻", "english": "turn a deaf ear to...", "type": "短语", "keyWords": ["deaf"] },
-    { "chinese": "不听劝告", "english": "be deaf to advice", "type": "短语", "keyWords": ["deaf"] },
-    { "chinese": "不肯倾听别人意见的人是最聋的人。", "english": "None (are) so deaf as those who won't hear.", "type": "句子", "keyWords": ["deaf"] },
-    { "chinese": "关于西非的一本书", "english": "a book dealing with West Africa", "type": "短语", "keyWords": ["deal"] },
-    { "chinese": "同这家店做茶叶生意已经有20年了。", "english": "I've dealt with this shop for tea for 20 years.", "type": "句子", "keyWords": ["deal"] },
-    { "chinese": "他很难打交道。", "english": "He is hard to deal with.", "type": "句子", "keyWords": ["deal"] },
-    { "chinese": "他抽许多烟。", "english": "He smokes a great deal (=a lot).", "type": "句子", "keyWords": ["deal"] }
+    { "chinese": "我不宜吃苹果。", "english": "Apples disagree with me.", "type": "句子", "keyWords": ["disagree"] }
 ];
