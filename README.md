@@ -38,7 +38,7 @@ n.苹果|apple|单词|
 
 ## 版权信息
 本项目采用 MIT 许可证，详情参见 LICENSE 文件。  
-Copyright © 2025 SQJ. All rights reserved.
+Copyright © 2025-2026 SQJ. All rights reserved.
 
 ## 支持作者
 如果你觉得本项目对你有帮助，欢迎通过以下方式支持作者：
