@@ -43,7 +43,7 @@ Copyright © 2025-2026 SQJ. All rights reserved.
 ## 支持作者
 如果你觉得本项目对你有帮助，欢迎通过以下方式支持作者：
 
-- 以太坊地址：**0xb0cD845Aa3891475746b6dFd44088c99AA01f349**
+- 以太坊地址：**0xb0cD845Aa3891475746b6dFd44088c99AA01f349**  
   ![](https://qgl.pages.dev/static/img/qrcode.gif)
 - 在钱包或区块浏览器中查看： https://etherscan.io/address/0xb0cD845Aa3891475746b6dFd44088c99AA01f349
 
