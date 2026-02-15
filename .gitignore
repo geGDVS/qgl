@@ -7,7 +7,7 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
-#VSCode settings folder
+# VSCode settings folder
 .vscode/
 
 # Mac system files
