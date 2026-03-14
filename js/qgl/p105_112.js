@@ -195,7 +195,6 @@ const qgl105_112 = [
     { "chinese": "n.[C][U]发烧；一时的狂热，激动，兴奋", "english": "fever", "type": "单词", "keyWords": [] },
     { "chinese": "a.发烧的；狂热的", "english": "feverish", "type": "单词", "keyWords": ["fever"] },
     { "chinese": "疯狂的活动", "english": "feverish activities", "type": "短语", "keyWords": ["feverish"] },
-    { "chinese": "发烧", "english": "run a fever", "type": "短语", "keyWords": ["fever"] },
     { "chinese": "发高烧", "english": "have a high fever", "type": "短语", "keyWords": ["fever"] },
     { "chinese": "黄热病", "english": "yellow fever", "type": "短语", "keyWords": ["fever"] },
     { "chinese": "所有人都兴奋之极", "english": "Everyone was in a fever of excitement.", "type": "句子", "keyWords": ["fever"] },

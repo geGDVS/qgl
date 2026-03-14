@@ -21,7 +21,7 @@ const qgl113_120 = [
     { "chinese": "步行", "english": "on foot", "type": "短语", "keyWords": ["foot"] },
     { "chinese": "（挣扎着）站起来", "english": "struggle to one's feet", "type": "短语", "keyWords": ["foot"] },
     { "chinese": "失足；踏空", "english": "miss one's foot", "type": "短语", "keyWords": ["foot"] },
-    { "chinese": "站起来", "english": "rise to get on one's feet", "type": "短语", "keyWords": ["foot"] },
+    { "chinese": "站起来", "english": "rise to/ get on one's feet", "type": "短语", "keyWords": ["foot"] },
     { "chinese": "突然站起，跳起", "english": "jump/ spring to one's feet", "type": "短语", "keyWords": ["foot"] },
     { "chinese": "在山脚下，在山的下部", "english": "at the foot of the mountain", "type": "短语", "keyWords": ["foot"] },
     { "chinese": "n.[C]脚步；脚步声；一步跨出去的距离", "english": "footstep", "type": "单词", "keyWords": [] },
