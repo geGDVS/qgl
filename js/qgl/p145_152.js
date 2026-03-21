@@ -209,7 +209,6 @@ const qgl145_152 = [
     { "chinese": "单（双）膝跪着", "english": "be on one's knee (s)", "type": "短语", "keyWords": ["knee"] },
     { "chinese": "单（双）膝", "english": "go/get down on one's knee (s)", "type": "短语", "keyWords": ["knee"] },
     { "chinese": "vi. 跪着；跪下", "english": "kneel", "type": "单词", "keyWords": [] },
-    { "chinese": "vi. 跪着；跪下", "english": "kneel", "type": "单词", "keyWords": [] },
     { "chinese": "跪在地板上", "english": "kneel down on the floor", "type": "短语", "keyWords": ["kneel"] },
     { "chinese": "n. 小刀；餐刀；外科手术刀", "english": "knife", "type": "单词", "keyWords": [] },
     { "chinese": "(吃西餐用的) 一副刀叉", "english": "a knife and fork", "type": "短语", "keyWords": ["knife"] },

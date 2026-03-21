@@ -1,8 +1,8 @@
 const qgl165_172 = [
     { "chinese": "每种物质，不管是什么，都由原子构成。", "english": "Each substance, whatever it is, is made up of atoms.", "type": "句子", "keyWords": ["make"] },
-    { "chinese": "补偿；弥补", "english": "make up (for) sth.", "type": "短语", "keyWords": ["make"] },
-    { "chinese": "补回损失的时间", "english": "make up (for) lost time", "type": "短语", "keyWords": ["make"] },
-    { "chinese": "弥补损失", "english": "make up (for) a loss", "type": "短语", "keyWords": ["make"] },
+    { "chinese": "补偿；弥补", "english": "make up for sth.", "type": "短语", "keyWords": ["make"] },
+    { "chinese": "补回损失的时间", "english": "make up for lost time", "type": "短语", "keyWords": ["make"] },
+    { "chinese": "弥补损失", "english": "make up for a loss", "type": "短语", "keyWords": ["make"] },
     { "chinese": "这是完全捏造的故事。", "english": "It's all a made-up story.", "type": "句子", "keyWords": ["make"] },
     { "chinese": "(家具、衣服等) 定制的，定做的", "english": "made-to-measure", "type": "短语", "keyWords": ["make"] },
     { "chinese": "这是什么牌子的汽车？", "english": "What make of car is this?", "type": "句子", "keyWords": ["make"] },
