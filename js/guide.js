@@ -42,7 +42,7 @@ function goBackToMainPage() {
 }
 
 // 添加事件监听器
-const backButton = document.getElementById('back-button');
+const backButton = document.getElementById('home-button');
 backButton.addEventListener('click', goBackToMainPage);
 
 const volumeToggle = document.getElementById('volume-toggle');

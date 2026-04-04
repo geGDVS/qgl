@@ -48,6 +48,7 @@
                 <mdui-menu-item value="qgl136-150">SEWT P136-150</mdui-menu-item>
                 <mdui-menu-item value="qgl151-165">SEWT P151-165</mdui-menu-item>
                 <mdui-menu-item value="qgl166-180">SEWT P166-180</mdui-menu-item>
+                <mdui-menu-item value="qgl181-195">SEWT P181-195</mdui-menu-item>
             </mdui-menu>
             <mdui-button id="close-button" variant="tonal" style="margin: 16px;" >
                 <mdui-icon slot="icon" name="close"></mdui-icon>
@@ -59,6 +60,9 @@
         <div class="control-panel">
             <mdui-button-icon id="choose-button" variant="tonal" icon="list" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="home-button" variant="outlined" icon="home" style="margin: 5px;"></mdui-button-icon>
+            <mdui-tooltip content="Wrong Set">
+                <mdui-button-icon id="wrong-button" variant="outlined" icon="bookmark_border" style="margin: 5px;"></mdui-button-icon>
+            </mdui-tooltip>
         </div>
 
         <!-- 切换按钮区 -->
@@ -77,8 +81,10 @@
                 <p id="hint" class="hint-text"></p>
 
                 <mdui-segmented-button-group id="seg-group">
-                    <mdui-segmented-button id="show-answer-button" data-audio="static/audio/pong2.wav">
-                        <u>S</u>HOW ANS
+                    <mdui-segmented-button id="show-answer-button" icon="remove_red_eye" data-audio="static/audio/pong2.wav">
+                        <u>A</u>NS
+                    </mdui-segmented-button>
+                    <mdui-segmented-button id="add-wrong-button" icon="bookmark_add" data-audio="static/audio/takephoto.wav">
                     </mdui-segmented-button>
                     <mdui-segmented-button id="next-button" data-audio="static/audio/pong1.wav" end-icon="arrow_forward">
                         <u>N</u>EXT
@@ -106,9 +112,11 @@
     <script src="js/qgl2/p136_150.js"></script>
     <script src="js/qgl2/p151_165.js"></script>
     <script src="js/qgl2/p166_180.js"></script>
+    <script src="js/qgl2/p181_195.js"></script>
     
     <!-- 主脚本 -->
     <script src="js/beta2.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/wrong_index2.js"></script>
 </body>
 </html>

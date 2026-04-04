@@ -8,37 +8,6 @@ darkModeToggle.addEventListener('click', handleDarkModeToggle);
 volumeButton.icon = isMuted ? 'volume_off' : 'volume_up';
 
 
-// 显示当前中文单词及考察类型
-function showCurrentWord() {
-    const chineseWordElement = document.getElementById('chinese-word');
-    const questionTypeElement = document.getElementById('question-type');
-    const hintElement = document.getElementById('hint');
-    const currentPair = currentExamSet[currentIndex];
-    
-    chineseWordElement.textContent = currentPair.chinese;
-    questionTypeElement.textContent = `${currentPair.type}`;
-
-    let hint = '';
-    if (currentPair.type === '短语' || currentPair.type === '句子') {
-        if (currentPair.keyWords) {
-            hint = currentPair.keyWords.join(' ');
-        }
-    } else if (currentPair.type === '单词') {
-        // 考察单词时，提示首字母
-        hint = `${currentPair.english[0]}-`;
-    }
-    
-    hintElement.textContent = hint ? `HINT: ${hint}` : '';
-    document.getElementById('result-message').textContent = '';
-}
-
-// 显示答案
-function showAnswer() {
-    playAudio('show-answer-button');
-    const resultElement = document.getElementById('result-message');
-    const correctAnswer = currentExamSet[currentIndex].english;
-    resultElement.textContent = `${correctAnswer}`;
-}
 
 // 显示下一个单词
 function showNextWord() {
@@ -48,6 +17,7 @@ function showNextWord() {
         currentIndex = 0;
     }
     showCurrentWord();
+    enableShowAnswer();
 }
 
 // 播放音频函数
@@ -95,6 +65,12 @@ function initPage() {
 // 添加事件监听器
 const showAnswerButton = document.getElementById('show-answer-button');
 showAnswerButton.addEventListener('click', showAnswer);
+function disableShowAnswer(){ 
+    showAnswerButton.setAttribute('disabled','disabled'); 
+}
+function enableShowAnswer(){ 
+    showAnswerButton.removeAttribute('disabled'); 
+}
 
 const nextButton = document.getElementById('next-button');
 nextButton.addEventListener('click', showNextWord);
@@ -104,6 +80,8 @@ examSetSelect.addEventListener('change', handleExamSetChange);
 
 const volumeToggle = document.getElementById('volume-toggle');
 volumeToggle.addEventListener('click', handleVolumeToggle);
+
+
 
 // 侧边栏逻辑
 const navigationDrawer = document.querySelector("mdui-navigation-drawer");
@@ -116,7 +94,7 @@ closeButton.addEventListener("click", () => navigationDrawer.open = false);
 // 键盘事件监听
 document.addEventListener('keydown', function(e) {
     // 按S键触发显示答案（不区分大小写）
-    if (e.key.toLowerCase() === 's') {
+    if (e.key.toLowerCase() === 'a') {
         e.preventDefault();
         document.getElementById('show-answer-button').click();
     }
