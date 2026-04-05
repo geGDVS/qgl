@@ -33,10 +33,19 @@ const homeButton = document.getElementById('home-button');
 homeButton.addEventListener('click', goToHomePage);
 const wrongButton = document.getElementById('wrong-button');
 wrongButton.addEventListener('click', goToWrongPage);
+const addFab = document.getElementById('wrong-fab');
+addFab.addEventListener('click', () => document.getElementById('add-wrong-button') && document.getElementById('add-wrong-button').click());
 // 获取并控制“加入错题”按钮（在显示答案前禁用）
 var addWrongBtn = document.getElementById('add-wrong-button');
-function disableAddWrong(){ if(addWrongBtn) addWrongBtn.setAttribute('disabled','disabled'); }
-function enableAddWrong(){ if(addWrongBtn) addWrongBtn.removeAttribute('disabled'); }
+
+function disableAddWrong(){ 
+    addWrongBtn.setAttribute('disabled','disabled'); 
+    addFab.setAttribute('disabled','disabled');
+}
+function enableAddWrong(){ 
+    addWrongBtn.removeAttribute('disabled'); 
+    addFab.removeAttribute('disabled');
+}
 let savedExamSet = localStorage.getItem('selectedExamSet2');
 
 // 处理考察集选择事件

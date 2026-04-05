@@ -1,5 +1,7 @@
 // js/wrong_index2.js
 // index2 专用：从页面抓取当前题目并把题目加入本地错题集（与 wrong.html 共用同一 localStorage 键）
+
+
 (function(){
     var KEY = 'qgl_wrong_set';
 
@@ -61,7 +63,6 @@
                 console.log('错题已保存，id=', id, 'item=', saved);
                 console.log('当前错题集总数=', all.length, all);
             }catch(e){ console.log('保存后打印错题列表失败', e); }
-            mdui.snackbar({message: 'Added to wrong set'});
             return true;
         } else {
             return false;
@@ -72,9 +73,18 @@
         var addBtn = document.getElementById('add-wrong-button');
         if (addBtn){ addBtn.addEventListener('click', function(){ addCurrentQuestionToWrong(); }); }
         var wrongOpen = document.getElementById('wrong-button');
-        if (wrongOpen){ wrongOpen.addEventListener('click', function(){ window.open('wrong.html', '_blank'); }); }
+        if (wrongOpen){ wrongOpen.addEventListener('click', function(){ window.open('wrong.html'); }); }
     });
 
     // 可选导出（非必须）
     window.qglWrongIndex2 = { addCurrentQuestionToWrong: addCurrentQuestionToWrong };
 })();
+
+// 键盘事件监听
+document.addEventListener('keydown', function(e) {
+    if (e.key.toLowerCase() === 'f') {
+        e.preventDefault();
+        document.getElementById('add-wrong-button').click();
+    }
+});
+

@@ -67,9 +67,11 @@ const showAnswerButton = document.getElementById('show-answer-button');
 showAnswerButton.addEventListener('click', showAnswer);
 function disableShowAnswer(){ 
     showAnswerButton.setAttribute('disabled','disabled'); 
+    showFab.setAttribute('disabled','disabled');
 }
 function enableShowAnswer(){ 
     showAnswerButton.removeAttribute('disabled'); 
+    showFab.removeAttribute('disabled');
 }
 
 const nextButton = document.getElementById('next-button');
@@ -80,7 +82,13 @@ examSetSelect.addEventListener('change', handleExamSetChange);
 
 const volumeToggle = document.getElementById('volume-toggle');
 volumeToggle.addEventListener('click', handleVolumeToggle);
-
+// 关于对话框逻辑
+const aboutDialog = document.getElementById('about-dialog');
+const showAboutButton = document.getElementById('show-about-dialog');
+showAboutButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    aboutDialog.open = true;
+});
 
 
 // 侧边栏逻辑
@@ -94,7 +102,7 @@ closeButton.addEventListener("click", () => navigationDrawer.open = false);
 // 键盘事件监听
 document.addEventListener('keydown', function(e) {
     // 按S键触发显示答案（不区分大小写）
-    if (e.key.toLowerCase() === 'a') {
+    if (e.key.toLowerCase() === 's') {
         e.preventDefault();
         document.getElementById('show-answer-button').click();
     }

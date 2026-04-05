@@ -241,14 +241,20 @@ if (closeButton && navigationDrawer) closeButton.addEventListener("click", funct
 			window.currentWrongId = null;
 			// 禁用按钮
 			document.getElementById('show-answer-button').disabled = true;
+			document.getElementById('show-fab').disabled = true;
 			document.getElementById('delete-wrong-button').disabled = true;
+			document.getElementById('wrong-fab').disabled = true;
 			document.getElementById('next-button').disabled = true;
+			document.getElementById('next-fab').disabled = true;
 			return;
 		}
 		// 有题时启用按钮
 		document.getElementById('show-answer-button').disabled = false;
+		document.getElementById('show-fab').disabled = false;
 		document.getElementById('delete-wrong-button').disabled = false;
+		document.getElementById('wrong-fab').disabled = false;
 		document.getElementById('next-button').disabled = false;
+		document.getElementById('next-fab').disabled = false;
 		if(i < 0) i = 0; if(i >= items.length) i = items.length - 1; idx = i;
 		var it = items[idx];
 		if(pQ) pQ.textContent = it.question || '题目';
@@ -281,6 +287,8 @@ if (closeButton && navigationDrawer) closeButton.addEventListener("click", funct
 
 	document.getElementById('show-answer-button').addEventListener('click', function(){
 		playAudio('show-answer-button');
+		document.getElementById('show-answer-button').disabled = true;
+		document.getElementById('show-fab').disabled = true;
 		var a = qglWrong.all();
 		if(currentFilter!=='all') a = a.filter(function(it){return it.setKey===currentFilter});
 		if(!a.length) return;
@@ -291,3 +299,44 @@ if (closeButton && navigationDrawer) closeButton.addEventListener("click", funct
 	renderList();
 	if(!items.length) showQuestion(0);
 })();
+
+// 键盘事件监听
+document.addEventListener('keydown', function(e) {
+    // 按S键触发显示答案（不区分大小写）
+    if (e.key.toLowerCase() === 's') {
+        e.preventDefault();
+        document.getElementById('show-answer-button').click();
+    }
+    
+    // 按N键触发下一题（不区分大小写）
+    if (e.key.toLowerCase() === 'n') {
+        e.preventDefault();
+        document.getElementById('next-button').click();
+    }
+
+	if (e.key.toLowerCase() === 'f') {
+        e.preventDefault();
+        document.getElementById('delete-wrong-button').click();
+    }
+});
+
+// 根据设备/视口切换移动模式：隐藏分段按钮，显示底部 FAB
+function adjustForMobile() {
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth <= 600;
+    if (isMobile) {
+        document.body.classList.add('mobile-mode');
+    } else {
+        document.body.classList.remove('mobile-mode');
+    }
+}
+
+// 绑定 FAB（如果存在）到已有的操作
+const showFab = document.getElementById('show-fab');
+if (showFab) showFab.addEventListener('click', () => document.getElementById('show-answer-button') && document.getElementById('show-answer-button').click());
+const deleteFab = document.getElementById('wrong-fab');
+if (deleteFab) deleteFab.addEventListener('click', () => document.getElementById('delete-wrong-button') && document.getElementById('delete-wrong-button').click());
+const nextFab = document.getElementById('next-fab');
+if (nextFab) nextFab.addEventListener('click', () => document.getElementById('next-button') && document.getElementById('next-button').click());
+
+window.addEventListener('resize', adjustForMobile);
+adjustForMobile();

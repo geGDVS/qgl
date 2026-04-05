@@ -19,13 +19,7 @@ const newButton = document.getElementById('new-button');
 newButton.addEventListener('click', goToNewPage);
 
 
-// 关于对话框逻辑
-const aboutDialog = document.getElementById('about-dialog');
-const showAboutButton = document.getElementById('show-about-dialog');
-showAboutButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    aboutDialog.open = true;
-});
+
 
 
 let savedExamSet = localStorage.getItem('selectedExamSet1');

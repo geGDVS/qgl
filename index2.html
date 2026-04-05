@@ -67,6 +67,7 @@
 
         <!-- 切换按钮区 -->
         <div class="toggle-panel">
+            <mdui-button-icon id="show-about-dialog"  variant="standard" icon="info" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="dark-mode-toggle" data-audio="static/audio/zi.wav" icon="dark_mode" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="volume-toggle" icon="volume_up" style="margin: 5px;"></mdui-button-icon>
         </div>
@@ -74,7 +75,7 @@
         <!-- 主内容区 -->
         <div class="main-content">
             <mdui-card class="card mdui-prose">
-                <h1 style="margin-bottom: 24px;">FUCK SEWT</h1>
+                <h1 style="margin-bottom: 24px;">REVIEW</h1>
                 
                 <p id="question-type" class="question-type"></p>
                 <p id="chinese-word" class="chinese-word"></p>
@@ -82,7 +83,7 @@
 
                 <mdui-segmented-button-group id="seg-group">
                     <mdui-segmented-button id="show-answer-button" icon="remove_red_eye" data-audio="static/audio/pong2.wav">
-                        <u>A</u>NS
+                        AN<u>S</u>
                     </mdui-segmented-button>
                     <mdui-segmented-button id="add-wrong-button" icon="bookmark_add" data-audio="static/audio/takephoto.wav">
                     </mdui-segmented-button>
@@ -93,10 +94,42 @@
                 
                 <p id="result-message" class="result-message"></p>
             </mdui-card>
-            <mdui-fab size="large" icon="slideshow" id="show-fab" class="mobile-fab mobile-left"></mdui-fab>
+            <mdui-fab size="large" icon="remove_red_eye" id="show-fab" class="mobile-fab mobile-left"></mdui-fab>
+            <mdui-fab size="large" icon="bookmark_add" id="wrong-fab" class="mobile-fab mobile-middle"></mdui-fab>
             <mdui-fab size="large" icon="arrow_forward" id="next-fab" class="mobile-fab mobile-right"></mdui-fab>
         </div>
 
+
+        <!-- 关于对话框 -->
+        <mdui-dialog close-on-esc close-on-overlay-click id="about-dialog">
+            <span slot="headline">关于Review Mode</span>
+            <p>本页面以15页为一集，帮助用户二次复习SEWT。</p>
+            
+            <h3>错题集使用方法</h3>
+            <ul>
+                <li><strong>添加错题：</strong>答案显示后，点击"加入错题"按钮将当前题目加入错题集</li>
+                <li><strong>查看错题：</strong>点击左上角的"Wrong Set"按钮进入错题集页面</li>
+                <li><strong>浏览错题：</strong>在错题集页面中浏览所有保存的错题，查看答案或按题集筛选</li>
+                <li><strong>数据保存：</strong>错题集自动保存在浏览器本地存储中，不会丢失</li>
+            </ul>
+            
+            <h3>快捷键说明</h3>
+            <table class="mdui-table">
+                <tbody> 
+                    <tr><td><strong>S 键</strong></td><td>显示答案</td></tr>
+                    <tr><td><strong>N 键</strong></td><td>下一题</td></tr>
+                    <tr><td><strong>F 键</strong></td><td>加入错题（显示答案后可用）</td></tr>
+                </tbody>
+            </table>
+            
+            <h3>使用小贴士</h3>
+            <ul>
+                <li>在答案显示前无法添加错题，这样可以防止误操作</li>
+                <li>使用键盘快捷键可以大幅提高答题速度</li>
+                <li>每个浏览器/设备都有独立的错题集，需要自己维护</li>
+                <li>清除浏览器缓存会删除错题集数据，请谨慎操作</li>
+            </ul>
+        </mdui-dialog>
     </div>
     
     <!-- 单词集数据 -->

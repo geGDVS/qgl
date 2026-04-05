@@ -82,22 +82,24 @@ footer {
     max-width: 800px;
 }
 
-    /* 移动端 FAB 控制：默认隐藏，进入 mobile-mode 时显示并固定到左右下角 */
-    #show-fab, #next-fab {
-        display: none;
-    }
+/* 移动端 FAB 控制：默认隐藏，进入 mobile-mode 时显示并固定到左右下角 */
+#show-fab, #wrong-fab, #next-fab {
+    display: none;
+}
 
-    body.mobile-mode #seg-group {
-        display: none !important;
-    }
+body.mobile-mode #seg-group {
+    display: none !important;
+}
 
-    body.mobile-mode #show-fab,
-    body.mobile-mode #next-fab {
-        display: inline-block;
-        position: fixed;
-        bottom: 20px;
-        z-index: 1200;
-    }
+body.mobile-mode #show-fab,
+body.mobile-mode #wrong-fab,
+body.mobile-mode #next-fab {
+    display: inline-block;
+    position: fixed;
+    bottom: 20px;
+    z-index: 1200;
+}
 
-    #show-fab.mobile-left { left: 20px; }
-    #next-fab.mobile-right { right: 20px; }
+#show-fab.mobile-left { left: 20px; }
+#wrong-fab.mobile-middle { left: 50%; transform: translateX(-50%); }
+#next-fab.mobile-right { right: 20px; }
