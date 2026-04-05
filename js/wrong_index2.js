@@ -71,9 +71,9 @@
 
     document.addEventListener('DOMContentLoaded', function(){
         var addBtn = document.getElementById('add-wrong-button');
-        if (addBtn){ addBtn.addEventListener('click', function(){ addCurrentQuestionToWrong(); }); }
+        addBtn.addEventListener('click', function(){ addCurrentQuestionToWrong(); });
         var wrongOpen = document.getElementById('wrong-button');
-        if (wrongOpen){ wrongOpen.addEventListener('click', function(){ window.open('wrong.html'); }); }
+        wrongOpen.addEventListener('click', function(){ window.location.href = 'wrong.html'; });
     });
 
     // 可选导出（非必须）
