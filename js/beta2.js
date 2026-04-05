@@ -16,6 +16,9 @@ const examSets = {
     "qgl181-195": qgl181_195,
 };
 
+// 暴露到全局
+window.examSets = examSets;
+
 // 打乱所有测试集
 for (const setKey in examSets) {
     examSets[setKey].sort(() => Math.random() - 0.5);

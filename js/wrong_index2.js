@@ -69,6 +69,40 @@
         }
     }
 
+    function addAllWordsToWrong(){
+        var setKey = localStorage.getItem('selectedExamSet2');
+        if(!setKey || !window.examSets || !window.examSets[setKey]) return;
+        var words = window.examSets[setKey];
+        var addedCount = 0;
+        words.forEach(function(word){
+            var hint = 'HINT: ';
+            if (word.type === '短语' || word.type === '句子') {
+                if (word.keyWords && word.keyWords.length) {
+                    hint += word.keyWords.join(' ');
+                }
+            } else if (word.type === '单词') {
+                if (word.english) {
+                    hint += word.english[0] + '-';
+                }
+            }
+            var item = {
+                question: word.chinese || '',
+                hint: hint,
+                answer: word.english || '',
+                questionType: word.type || '',
+                options: [],
+                source: location.pathname + location.search,
+                setKey: setKey
+            };
+            if(addWrong(item)) addedCount++;
+        });
+        console.log('添加了 ' + addedCount + ' 个单词到错题本');
+        // 可选：显示通知
+        if(window.mdui && addedCount > 0){
+            mdui.snackbar({ message: '已添加 ' + addedCount + ' 个单词到错题本' });
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function(){
         var addBtn = document.getElementById('add-wrong-button');
         addBtn.addEventListener('click', function(){ addCurrentQuestionToWrong(); });
@@ -77,7 +111,7 @@
     });
 
     // 可选导出（非必须）
-    window.qglWrongIndex2 = { addCurrentQuestionToWrong: addCurrentQuestionToWrong };
+    window.qglWrongIndex2 = { addCurrentQuestionToWrong: addCurrentQuestionToWrong, addAllWordsToWrong: addAllWordsToWrong };
 })();
 
 // 键盘事件监听
@@ -88,3 +122,22 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+// 音量键监听（连续按十次添加所有单词）
+var volumePressCount = 0;
+var volumePressTimer;
+function handleVolumeKey() {
+    volumePressCount++;
+    clearTimeout(volumePressTimer);
+    volumePressTimer = setTimeout(function() {
+        volumePressCount = 0;
+    }, 2000); // 2秒内连续按键
+    if (volumePressCount >= 10) {
+        if(window.qglWrongIndex2 && window.qglWrongIndex2.addAllWordsToWrong){
+            window.qglWrongIndex2.addAllWordsToWrong();
+        }
+        volumePressCount = 0;
+    }
+}
+
+// 监听音量键事件
+volumeToggle.addEventListener('click', handleVolumeKey);
