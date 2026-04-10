@@ -1,5 +1,5 @@
 const qgl181_195 = [
-     { "chinese": "a.中立的;不确定的", "english": "neutral", "type": "单词", "keyWords": [] },
+    { "chinese": "a.中立的;不确定的", "english": "neutral", "type": "单词", "keyWords": [] },
     { "chinese": "中立国", "english": "a neutral nation", "type": "短语", "keyWords": ["neutral"] },
     { "chinese": "保持中立", "english": "be/remain neutral", "type": "短语", "keyWords": ["neutral"] },
     { "chinese": "ad.永不;从来没有", "english": "never", "type": "单词", "keyWords": [] },
@@ -433,7 +433,7 @@ const qgl181_195 = [
     { "chinese": "按时间/尺寸大小的顺序", "english": "in order of time/size", "type": "短语", "keyWords": ["order"] },
     { "chinese": "命令某人做某事", "english": "order sb. to do sth.", "type": "短语", "keyWords": ["order"] },
     { "chinese": "a. 整齐的；有秩序的(反disorderly)", "english": "orderly", "type": "单词", "keyWords": [] },
-    { "chinese": "a. 平常的；平平庸的(强调平凡，无特别之处和例外)", "english": "ordinary", "type": "单词", "keyWords": [] },
+    { "chinese": "a. 平常的；平庸的(强调平凡，无特别之处和例外)", "english": "ordinary", "type": "单词", "keyWords": [] },
     { "chinese": "n. [C]器官；机构；管风琴；a. 有机的；器官的", "english": "organ", "type": "单词", "keyWords": [] },
     { "chinese": "n. 组织", "english": "organization", "type": "单词", "keyWords": [] },
     { "chinese": "vt. 组织；建立；vi. 组织起来；建立组织", "english": "organize", "type": "单词", "keyWords": [] },
