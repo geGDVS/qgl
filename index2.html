@@ -50,6 +50,7 @@
                 <mdui-menu-item value="qgl166-180">SEWT P166-180</mdui-menu-item>
                 <mdui-menu-item value="qgl181-195">SEWT P181-195</mdui-menu-item>
                 <mdui-menu-item value="qgl196-210">SEWT P196-210</mdui-menu-item>
+                <mdui-menu-item value="qgl211-225">SEWT P211-225</mdui-menu-item>
             </mdui-menu>
             <mdui-button id="close-button" variant="tonal" style="margin: 16px;" >
                 <mdui-icon slot="icon" name="close"></mdui-icon>
@@ -68,6 +69,9 @@
 
         <!-- 切换按钮区 -->
         <div class="toggle-panel">
+            <mdui-tooltip content="Add all">
+                <mdui-button-icon id="add-all-button" icon="select_all" style="margin: 5px;"></mdui-button-icon>
+            </mdui-tooltip>
             <mdui-button-icon id="dark-mode-toggle" data-audio="static/audio/zi.wav" icon="dark_mode" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="volume-toggle" icon="volume_up" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="show-about-dialog"  variant="standard" icon="info" style="margin: 5px;"></mdui-button-icon>
@@ -148,6 +152,7 @@
     <script src="js/qgl2/p166_180.js"></script>
     <script src="js/qgl2/p181_195.js"></script>
     <script src="js/qgl2/p196_210.js"></script>
+    <script src="js/qgl2/p211_225.js"></script>
     
     <!-- 主脚本 -->
     <script src="js/beta2.js"></script>

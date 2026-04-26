@@ -115,6 +115,16 @@ if (closeButton && navigationDrawer) closeButton.addEventListener("click", funct
 
 	function clearWrong(){ saveWrongSet([]); }
 
+	function clearWrongSet(setKey){
+		if(!setKey || setKey === 'all'){
+			saveWrongSet([]);
+			return;
+		}
+		var set = getWrongSet();
+		var filtered = set.filter(function(x){ return x.setKey !== setKey; });
+		saveWrongSet(filtered);
+	}
+
 	function getAll(){ return getWrongSet(); }
 
 	// 导出 API （不包含 index2 页面绑定）
@@ -122,6 +132,7 @@ if (closeButton && navigationDrawer) closeButton.addEventListener("click", funct
 		add: addWrong,
 		remove: removeWrong,
 		clear: clearWrong,
+		clearBySet: clearWrongSet,
 		all: getAll
 	};
 })();
@@ -282,6 +293,16 @@ if (closeButton && navigationDrawer) closeButton.addEventListener("click", funct
 			if(!a.length){ if(resultMessage) resultMessage.textContent = ''; if(hintEl) hintEl.textContent = ''; if(pQ) pQ.textContent = ''; window.currentWrongId = null; return; }
 			if(idx >= a.length) idx = 0;
 			showQuestion(idx);
+		});
+	}
+
+	var removeAllBtn = document.getElementById('remove-all-button');
+	if(removeAllBtn){
+		removeAllBtn.addEventListener('click', function(){
+			playAudio('remove-all-button');
+			qglWrong.clearBySet(currentFilter);
+			renderList();
+			showQuestion(0);
 		});
 	}
 

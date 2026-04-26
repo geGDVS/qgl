@@ -122,22 +122,9 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// 音量键监听（连续按十次添加所有单词）
-var volumePressCount = 0;
-var volumePressTimer;
-function handleVolumeKey() {
-    volumePressCount++;
-    clearTimeout(volumePressTimer);
-    volumePressTimer = setTimeout(function() {
-        volumePressCount = 0;
-    }, 2000); // 2秒内连续按键
-    if (volumePressCount >= 10) {
-        if(window.qglWrongIndex2 && window.qglWrongIndex2.addAllWordsToWrong){
-            window.qglWrongIndex2.addAllWordsToWrong();
-        }
-        volumePressCount = 0;
+// 监听"添加所有单词"按钮的点击事件
+document.getElementById('add-all-button').addEventListener('click', function() {
+    if(window.qglWrongIndex2 && window.qglWrongIndex2.addAllWordsToWrong){
+        window.qglWrongIndex2.addAllWordsToWrong();
     }
-}
-
-// 监听音量键事件
-volumeToggle.addEventListener('click', handleVolumeKey);
+});
