@@ -57,9 +57,8 @@
                 CLOSE
             </mdui-button>
         </mdui-navigation-drawer>
-        
-        <!-- 功能按钮 -->
-        <div class="control-panel">
+
+        <!-- <div class="control-panel">
             <mdui-button-icon id="choose-button" variant="tonal" icon="list" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="home-button" variant="outlined" icon="home" style="margin: 5px;"></mdui-button-icon>
             <mdui-tooltip content="Wrong Set">
@@ -67,7 +66,6 @@
             </mdui-tooltip>
         </div>
 
-        <!-- 切换按钮区 -->
         <div class="toggle-panel">
             <mdui-tooltip content="Add all">
                 <mdui-button-icon id="add-all-button" icon="select_all" style="margin: 5px;"></mdui-button-icon>
@@ -75,13 +73,27 @@
             <mdui-button-icon id="dark-mode-toggle" data-audio="static/audio/zi.wav" icon="dark_mode" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="volume-toggle" icon="volume_up" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="show-about-dialog"  variant="standard" icon="info" style="margin: 5px;"></mdui-button-icon>
-        </div>
+        </div> -->
         
+        <mdui-top-app-bar variant="center-aligned">
+            <mdui-button-icon id="choose-button" variant="tonal" icon="list" style="margin: 10px;"></mdui-button-icon>
+            <mdui-button-icon id="home-button" variant="outlined" icon="home" style="margin: 10px;"></mdui-button-icon>
+            <mdui-tooltip content="Wrong Set">
+                <mdui-button-icon id="wrong-button" variant="outlined" icon="bookmark_border" style="margin: 10px;"></mdui-button-icon>
+            </mdui-tooltip>
+            <mdui-top-app-bar-title style="margin: 10px;" >Review</mdui-top-app-bar-title>
+            <div style="flex-grow: 1"></div>
+            <mdui-tooltip content="Add all">
+                <mdui-button-icon id="add-all-button" icon="select_all" style="margin: 10px;"></mdui-button-icon>
+            </mdui-tooltip>
+            <mdui-button-icon id="dark-mode-toggle" data-audio="static/audio/zi.wav" icon="dark_mode" style="margin: 10px;"></mdui-button-icon>
+            <mdui-button-icon id="volume-toggle" icon="volume_up" style="margin: 10px;"></mdui-button-icon>
+            <mdui-button-icon id="show-about-dialog"  variant="standard" icon="info" style="margin: 10px;"></mdui-button-icon>
+        </mdui-top-app-bar>
+
         <!-- 主内容区 -->
         <div class="main-content">
             <mdui-card class="card mdui-prose">
-                <h1 style="margin-bottom: 24px;">REVIEW</h1>
-                
                 <p id="question-type" class="question-type"></p>
                 <p id="chinese-word" class="chinese-word"></p>
                 <p id="hint" class="hint-text"></p>
