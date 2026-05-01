@@ -51,6 +51,7 @@
                 <mdui-menu-item value="qgl181-195">SEWT P181-195</mdui-menu-item>
                 <mdui-menu-item value="qgl196-210">SEWT P196-210</mdui-menu-item>
                 <mdui-menu-item value="qgl211-225">SEWT P211-225</mdui-menu-item>
+                <mdui-menu-item value="qgl226-240">SEWT P226-240</mdui-menu-item>
             </mdui-menu>
             <mdui-button id="close-button" variant="tonal" style="margin: 16px;" >
                 <mdui-icon slot="icon" name="close"></mdui-icon>
@@ -58,7 +59,7 @@
             </mdui-button>
         </mdui-navigation-drawer>
 
-        <!-- <div class="control-panel">
+        <div class="control-panel">
             <mdui-button-icon id="choose-button" variant="tonal" icon="list" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="home-button" variant="outlined" icon="home" style="margin: 5px;"></mdui-button-icon>
             <mdui-tooltip content="Wrong Set">
@@ -70,18 +71,17 @@
             <mdui-tooltip content="Add all">
                 <mdui-button-icon id="add-all-button" icon="select_all" style="margin: 5px;"></mdui-button-icon>
             </mdui-tooltip>
-            <mdui-button-icon id="dark-mode-toggle" data-audio="static/audio/zi.wav" icon="dark_mode" style="margin: 5px;"></mdui-button-icon>
-            <mdui-button-icon id="volume-toggle" icon="volume_up" style="margin: 5px;"></mdui-button-icon>
-            <mdui-button-icon id="show-about-dialog"  variant="standard" icon="info" style="margin: 5px;"></mdui-button-icon>
-        </div> -->
+            <mdui-button-icon id="settings" icon="settings" style="margin: 5px;"></mdui-button-icon>
+            <mdui-button-icon id="show-about-dialog" icon="info" style="margin: 5px;"></mdui-button-icon>
+        </div>
         
-        <mdui-top-app-bar variant="center-aligned">
+        <!-- <mdui-top-app-bar variant="center-aligned">
             <mdui-button-icon id="choose-button" variant="tonal" icon="list" style="margin: 10px;"></mdui-button-icon>
             <mdui-button-icon id="home-button" variant="outlined" icon="home" style="margin: 10px;"></mdui-button-icon>
             <mdui-tooltip content="Wrong Set">
                 <mdui-button-icon id="wrong-button" variant="outlined" icon="bookmark_border" style="margin: 10px;"></mdui-button-icon>
             </mdui-tooltip>
-            <mdui-top-app-bar-title style="margin: 10px;" >Review</mdui-top-app-bar-title>
+            <mdui-top-app-bar-title style="margin: 10px;" >REVIEW</mdui-top-app-bar-title>
             <div style="flex-grow: 1"></div>
             <mdui-tooltip content="Add all">
                 <mdui-button-icon id="add-all-button" icon="select_all" style="margin: 10px;"></mdui-button-icon>
@@ -89,7 +89,7 @@
             <mdui-button-icon id="dark-mode-toggle" data-audio="static/audio/zi.wav" icon="dark_mode" style="margin: 10px;"></mdui-button-icon>
             <mdui-button-icon id="volume-toggle" icon="volume_up" style="margin: 10px;"></mdui-button-icon>
             <mdui-button-icon id="show-about-dialog"  variant="standard" icon="info" style="margin: 10px;"></mdui-button-icon>
-        </mdui-top-app-bar>
+        </mdui-top-app-bar> -->
 
         <!-- 主内容区 -->
         <div class="main-content">
@@ -147,6 +147,18 @@
                 <li>清除浏览器缓存会删除错题集数据，请谨慎操作</li>
             </ul>
         </mdui-dialog>
+
+        <mdui-dialog close-on-esc close-on-overlay-click id="setting-dialog">
+            <span slot="headline">Settings</span>
+            <div class="setting-toggle-row" style="display: flex; align-items: center; gap: 10px; margin: 5px;">
+                暗色模式
+                <mdui-switch id="dark-mode-toggle" data-audio="static/audio/zi.wav" unchecked-icon="brightness_5" checked-icon="dark_mode"></mdui-switch>
+            </div>
+            <div class="setting-toggle-row" style="display: flex; align-items: center; gap: 10px; margin: 5px;">
+                声音效果
+                <mdui-switch id="volume-toggle" unchecked-icon="volume_off" checked-icon="volume_up"></mdui-switch>
+            </div>
+        </mdui-dialog>
     </div>
     
     <!-- 单词集数据 -->
@@ -165,6 +177,7 @@
     <script src="js/qgl2/p181_195.js"></script>
     <script src="js/qgl2/p196_210.js"></script>
     <script src="js/qgl2/p211_225.js"></script>
+    <script src="js/qgl2/p226_240.js"></script>
     
     <!-- 主脚本 -->
     <script src="js/beta2.js"></script>

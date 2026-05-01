@@ -2,10 +2,14 @@ let currentIndex = 0;
 // 如果保存的单词集不存在或为空，则使用最新单词集
 let currentExamSet = (savedExamSet && examSets[savedExamSet]) ? examSets[savedExamSet] : examSets[0];
 let isMuted = localStorage.getItem('isMuted') === 'true';
-const volumeButton = document.getElementById('volume-toggle');
+const volumeToggle = document.getElementById('volume-toggle');
 const darkModeToggle = document.getElementById('dark-mode-toggle');
-darkModeToggle.addEventListener('click', handleDarkModeToggle);
-volumeButton.icon = isMuted ? 'volume_off' : 'volume_up';
+const darkModeIcon = document.getElementById('dark-mode-icon');
+const volumeIcon = document.getElementById('volume-icon');
+
+darkModeToggle.addEventListener('change', handleDarkModeToggle);
+volumeToggle.addEventListener('change', handleVolumeToggle);
+volumeToggle.checked = !isMuted;
 
 
 
@@ -32,23 +36,22 @@ function playAudio(buttonId) {
 }
 
 // 处理暗色模式切换
-function handleDarkModeToggle() {
+function handleDarkModeToggle(event) {
     playAudio('dark-mode-toggle');
-    document.documentElement.classList.toggle('mdui-theme-dark');
-    if (document.documentElement.classList.contains('mdui-theme-dark')) {
+    const isDark = event.target.checked;
+    document.documentElement.classList.toggle('mdui-theme-dark', isDark);
+    if (isDark) {
         localStorage.setItem('darkMode', 'enabled');
-        darkModeToggle.icon = 'dark_mode';
     } else {
         localStorage.setItem('darkMode', 'disabled');
-        darkModeToggle.icon = 'brightness_5';
     }
 }
 
 // 处理音量开关
-function handleVolumeToggle() {
-    isMuted = !isMuted;
+function handleVolumeToggle(event) {
+    const isOn = event.target.checked;
+    isMuted = !isOn;
     localStorage.setItem('isMuted', isMuted);
-    volumeButton.icon = isMuted ? 'volume_off' : 'volume_up';
 }
 
 
@@ -80,8 +83,6 @@ nextButton.addEventListener('click', showNextWord);
 const examSetSelect = document.getElementById('exam-set-select');
 examSetSelect.addEventListener('change', handleExamSetChange);
 
-const volumeToggle = document.getElementById('volume-toggle');
-volumeToggle.addEventListener('click', handleVolumeToggle);
 // 关于对话框逻辑
 const aboutDialog = document.getElementById('about-dialog');
 const showAboutButton = document.getElementById('show-about-dialog');
@@ -90,6 +91,12 @@ showAboutButton.addEventListener('click', (e) => {
     aboutDialog.open = true;
 });
 
+const settingDialog = document.getElementById('setting-dialog');
+const settingsButton = document.getElementById('settings');
+settingsButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    settingDialog.open = true;
+});
 
 // 侧边栏逻辑
 const navigationDrawer = document.querySelector("mdui-navigation-drawer");
@@ -119,17 +126,17 @@ const savedMode = localStorage.getItem('darkMode');
 
 if (savedMode === 'enabled') {
     document.documentElement.classList.add('mdui-theme-dark');
-    darkModeToggle.icon = 'dark_mode';
+    darkModeToggle.checked = true;
 } else if (savedMode === 'disabled') {
     document.documentElement.classList.remove('mdui-theme-dark');
-    darkModeToggle.icon = 'brightness_5';
+    darkModeToggle.checked = false;
 } else {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.classList.add('mdui-theme-dark');
-        darkModeToggle.icon = 'dark_mode';
+        darkModeToggle.checked = true;
     } else {
         document.documentElement.classList.remove('mdui-theme-dark');
-        darkModeToggle.icon = 'brightness_5';
+        darkModeToggle.checked = false;
     }
 }
 

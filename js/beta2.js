@@ -15,7 +15,8 @@ const examSets = {
     "qgl166-180": qgl166_180,
     "qgl181-195": qgl181_195,
     "qgl196-210": qgl196_210,
-    "qgl211-225": qgl211_225
+    "qgl211-225": qgl211_225,
+    "qgl226-240": qgl226_240,
 };
 
 // 暴露到全局
@@ -101,3 +102,4 @@ function showAnswer() {
     // 显示答案后允许加入错题
     enableAddWrong();
 }
+

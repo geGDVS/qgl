@@ -97,8 +97,7 @@
 
         <!-- 切换按钮区 -->
         <div class="toggle-panel">
-            <mdui-button-icon id="dark-mode-toggle" data-audio="static/audio/zi.wav" icon="dark_mode" style="margin: 5px;"></mdui-button-icon>
-            <mdui-button-icon id="volume-toggle" icon="volume_up" style="margin: 5px;"></mdui-button-icon>
+            <mdui-button-icon id="settings" icon="settings" style="margin: 5px;"></mdui-button-icon>
             <mdui-button-icon id="show-about-dialog"  variant="standard" icon="info" style="margin: 5px;"></mdui-button-icon>
         </div>
         
@@ -129,7 +128,7 @@
         <!-- 关于对话框 -->
         <mdui-dialog close-on-esc close-on-overlay-click id="about-dialog">
             <span slot="headline">关于Test for SEWT</span>
-            <p>当前版本：<a href="https://github.com/geGDVS/qgl/blob/main/UPDATE.md" target="_blank">2.6.0</a> (2026.04)</p>
+            <p>当前版本：<a href="https://github.com/geGDVS/qgl/blob/main/UPDATE.md" target="_blank">2.6.1</a> (2026.05)</p>
             <p>本网页旨在帮助用户复习和测试“番茄炒蛋”中的单词和短语。</p>
 
             <h3>版权信息</h3>
@@ -153,6 +152,18 @@
                     </mdui-segmented-button-group>
                 </div> 
 
+        </mdui-dialog>
+
+        <mdui-dialog close-on-esc close-on-overlay-click id="setting-dialog">
+            <span slot="headline">Settings</span>
+            <div class="setting-toggle-row" style="display: flex; align-items: center; gap: 10px; margin: 5px;">
+                暗色模式
+                <mdui-switch id="dark-mode-toggle" data-audio="static/audio/zi.wav" unchecked-icon="brightness_5" checked-icon="dark_mode"></mdui-switch>
+            </div>
+            <div class="setting-toggle-row" style="display: flex; align-items: center; gap: 10px; margin: 5px;">
+                声音效果
+                <mdui-switch id="volume-toggle" unchecked-icon="volume_off" checked-icon="volume_up"></mdui-switch>
+            </div>
         </mdui-dialog>
     </div>
     
