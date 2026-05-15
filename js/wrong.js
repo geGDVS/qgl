@@ -142,6 +142,7 @@ if (closeButton && navigationDrawer) closeButton.addEventListener("click", funct
 	var resultMessage = document.getElementById('result-message');
 	var pQ = document.getElementById('chinese-word');
 	var hintEl = document.getElementById('hint');
+	var questionTypeEl = document.getElementById('question-type');
 
 	var items = [];
 	var idx = 0;
@@ -247,8 +248,7 @@ if (closeButton && navigationDrawer) closeButton.addEventListener("click", funct
 			if(resultMessage) resultMessage.textContent = '';
 			if(hintEl) hintEl.textContent = 'HINT: 前往Review Mode增加错题';
 			if(pQ) pQ.textContent = '暂无错题';
-			var questionTypeEl = document.getElementById('question-type');
-			if(questionTypeEl) questionTypeEl.textContent = '提示';
+			if(questionTypeEl) questionTypeEl.textContent = '';
 			window.currentWrongId = null;
 			// 禁用按钮
 			document.getElementById('show-answer-button').disabled = true;
@@ -273,6 +273,7 @@ if (closeButton && navigationDrawer) closeButton.addEventListener("click", funct
 		if (resultMessage) resultMessage.textContent = '';
 		// 将 hint 写入你指定的 hint 元素
 		if(hintEl) hintEl.textContent = it.hint || '';
+		if(questionTypeEl) questionTypeEl.textContent = it.questionType ||'';
 		// 记录当前正在展示的错题 id 以便移除
 		window.currentWrongId = it.id;
 		// 不在此处修改选项 DOM，保留你手写的显示结构

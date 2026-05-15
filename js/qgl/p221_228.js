@@ -343,8 +343,6 @@ const qgl221_228 = [
     { "chinese": "满足某人的要求", "english": "meet/satisfy/fulfil one's requirements", "type": "短语", "keyWords": ["requirement"] },
     { "chinese": "vt./n. [C] [U] 营救；救援；搭救", "english": "rescue", "type": "单词", "keyWords": [] },
     { "chinese": "营救某人", "english": "come/go to one's rescue", "type": "短语", "keyWords": ["rescue"] },
-    { "chinese": "辨析：rescue, save", "english": "辨析：rescue, save", "type": "短语", "keyWords": ["rescue"] },
-    { "chinese": "rescue通常指采取快速有力的行动从而避免伤害、死亡、被攻击或被俘等逼近的危险；save意为救起后使其继续存在或保有有用性。", "english": "rescue通常指采取快速有力的行动从而避免伤害、死亡、被攻击或被俘等逼近的危险；save意为救起后使其继续存在或保有有用性。", "type": "句子", "keyWords": ["rescue"] },
     { "chinese": "n. [U] 研究；调查；探索（into/on）", "english": "research", "type": "单词", "keyWords": [] },
     { "chinese": "vi. 研究；调查；探索（into/on）", "english": "research", "type": "单词", "keyWords": [] },
     { "chinese": "n. [C] 一项研究", "english": "research", "type": "单词", "keyWords": [] }
