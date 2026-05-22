@@ -346,5 +346,5 @@ const qgl277_284 = [
     { "chinese": "adj.极大的，巨大的（近enormous, immense, huge, gigantic, colossal, vast）", "english": "tremendous /trəˈmendəs/ a.", "type": "单词", "keyWords": [] },
     { "chinese": "n.[C]（路、河流等）走向；倾向；趋势；时尚；vi.倾向，趋向", "english": "trend /trend/ n.[C]；vi.", "type": "单词", "keyWords": [] },
     { "chinese": "海岸线的走向", "english": "the trend of a coast-line", "type": "短语", "keyWords": ["trend"] },
-    { "chinese": "现代生活的趋势", "english": "the trend of modern living", "type": "短语", "keyWords": ["trend"] },
+    { "chinese": "现代生活的趋势", "english": "the trend of modern living", "type": "短语", "keyWords": ["trend"] }
 ];

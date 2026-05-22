@@ -1,7 +1,7 @@
 const qgl245_252 = [
     { "chinese": "你说你不做，但我说你就该做。(命令/要求)", "english": "You say you will not do it, but I say you shall do it.", "type": "句子", "keyWords": ["shall"] },
     { "chinese": "明天你可以得到答复。(承诺)", "english": "You shall have an answer by tomorrow.", "type": "句子", "keyWords": ["shall"] },
-    { "chinese": "任何一方不得单方面违约。(明文规定)", "english": "Each party shall not break the contract unilaterally.", "type": "句子", "keyWords": ["shall"] },
+    { "chinese": "任何一方不得单方面违约。(明文规定)", "english": "Each party shall not break the contract.", "type": "句子", "keyWords": ["shall"] },
     { "chinese": "能让那个男孩进来吗？(请示)", "english": "Shall the boy come in?", "type": "句子", "keyWords": ["shall"] },
     { "chinese": "浅的；肤浅的", "english": "shallow", "type": "单词", "keyWords": [] },
     { "chinese": "n. [U]肤浅", "english": "shallowness", "type": "单词", "keyWords": [] },
@@ -289,7 +289,7 @@ const qgl245_252 = [
     { "chinese": "俚语用词", "english": "slang words", "type": "短语", "keyWords": ["slang"] },
     { "chinese": "n.[C]奴隶", "english": "slave", "type": "单词", "keyWords": [] },
     { "chinese": "成为酒鬼", "english": "be a slave to drink", "type": "短语", "keyWords": ["slave"] },
-    { "chinese": "m.[U]奴隶制；奴隶身份", "english": "slavery", "type": "单词", "keyWords": [] },
+    { "chinese": "n.[U]奴隶制；奴隶身份", "english": "slavery", "type": "单词", "keyWords": [] },
     { "chinese": "v.睡m.[U](只用单)睡眠", "english": "sleep", "type": "单词", "keyWords": [] },
     { "chinese": "adj. 失眠的", "english": "sleepless", "type": "单词", "keyWords": [] },
     { "chinese": "adv. 睡着的，睡熟的", "english": "asleep", "type": "单词", "keyWords": [] },

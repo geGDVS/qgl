@@ -51,6 +51,7 @@ const qgl285_292 = [
     { "chinese": "信守诺言", "english": "be true to one's word", "type": "短语", "keyWords": ["true"] },
     { "chinese": "不到长城非好汉。", "english": "He who doesn't reach the Great Wall is not a true man.", "type": "句子", "keyWords": ["true"] },
     { "chinese": "符合于…，…适用", "english": "be true of", "type": "短语", "keyWords": ["true"] },
+    { "chinese": "吃的东西很好，服务质量也不错。", "english": "The food is good and the same is true of the service.", "type": "句子", "keyWords": ["true"] },
     { "chinese": "n.真理；真相，实情", "english": "truth", "type": "单词", "keyWords": [] },
     { "chinese": "说实在话，老实说", "english": "to tell the truth", "type": "短语", "keyWords": ["truth"] },
     { "chinese": "n.树干；皮箱；行李箱；大旅行箱；象鼻", "english": "trunk", "type": "单词", "keyWords": [] },
