@@ -263,7 +263,7 @@ const qgl285_292 = [
     { "chinese": "开始使用（某物）", "english": "bring sth. into use", "type": "短语", "keyWords": ["use"] },
     { "chinese": "（充分）利用", "english": "make (full/good) use of = make the most of", "type": "短语", "keyWords": ["use"] },
     { "chinese": "有用", "english": "be of (no, little...) use to sb./sth.", "type": "短语", "keyWords": ["use"] },
-    { "chinese": "做某事是无济于事的", "english": "It's/There's no use/good doing sth.", "type": "短语", "keyWords": ["use"] },
+    { "chinese": "做某事是无济于事的", "english": "It's no use/good doing sth.", "type": "短语", "keyWords": ["use"] },
     { "chinese": "（被）用于", "english": "be used to do sth./for (doing) sth.", "type": "短语", "keyWords": ["use"] },
     { "chinese": "用尽", "english": "use...up", "type": "短语", "keyWords": ["use"] },
     { "chinese": "v.惯常（仅用过去时，后接不定式）", "english": "used", "type": "单词", "keyWords": [] },
