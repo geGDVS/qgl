@@ -13,7 +13,7 @@ const qgl309_313 = [
     { "chinese": "这怎么啦？/这有什么不好？（反语）", "english": "What's wrong with it?", "type": "句子", "keyWords": ["wrong"] },
     { "chinese": "出差错，出故障；变坏了", "english": "go wrong", "type": "短语", "keyWords": ["wrong"] },
     { "chinese": "做错事；犯罪，作恶", "english": "do wrong", "type": "短语", "keyWords": ["wrong"] },
-    { "chinese": "明辨是非", "english": "know right from wrong", "type": "短语", "keyWords": ["wrong"] },
+    { "chinese": "明辨是非", "english": "tell right from wrong", "type": "短语", "keyWords": ["wrong"] },
     { "chinese": "我受了冤屈。", "english": "I was wronged.", "type": "句子", "keyWords": ["wrong"] },
     { "chinese": "对待某人不公平；冤枉某人，委屈某人", "english": "do sb. a great wrong/ do a wrong to sb./ wrong sb.", "type": "短语", "keyWords": ["wrong"] },
     { "chinese": "以恶报恶于事无补。", "english": "Two wrongs don't make a right.", "type": "句子", "keyWords": ["wrong"] },

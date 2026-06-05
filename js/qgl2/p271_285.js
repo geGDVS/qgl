@@ -218,7 +218,7 @@ const qgl271_285 = [
     { "chinese": "多谢。", "english": "Many thanks/ Thanks a lot.", "type": "句子", "keyWords": ["thank"] },
     { "chinese": "因某事而感谢某人（近be grateful/ obliged to sb. for sth.）", "english": "be thankful to sb. for sth.", "type": "短语", "keyWords": ["thank"] },
     { "chinese": "多亏/由于（辨析见account）", "english": "thanks to...", "type": "短语", "keyWords": ["thank"] },
-    { "chinese": "求你安静点。（埋怨口气）", "english": "Will you thank you to be quiet.", "type": "句子", "keyWords": ["thank"] },
+    { "chinese": "求你安静点。（埋怨口气）", "english": "I will thank you to be quiet.", "type": "句子", "keyWords": ["thank"] },
     { "chinese": "pron./a.那，那个；ad.（与形容词或副词连用）那样；那么；conj.引导名词性从句或状语从句", "english": "that", "type": "单词", "keyWords": [] },
     { "chinese": "就是说；即", "english": "that is (to say)", "type": "短语", "keyWords": ["that"] },
     { "chinese": "因为", "english": "in that (because)", "type": "短语", "keyWords": ["that"] },
